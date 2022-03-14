@@ -1,0 +1,62 @@
+@import "../../variables.css";
+.title {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #234465;
+    text-decoration: underline;
+    margin-bottom: 2%;
+}
+.header {
+    background-color: var(--primary-color);
+    min-height: 9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: var(--secondary-color);
+    padding: 0 15vmin;
+}
+.infoLine {
+    display: flex;
+    background: var(--primary-color);
+    height: 5vh;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.leftIcons {
+    display: flex;
+    align-items: center;
+    
+}
+.rightIcons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.rightIcons p {
+    margin-left:10px;
+    font-size: calc(5px + 2vmin);
+}
+.iconCircle {
+    border-radius: 50%;
+    background: var(--secondary-color);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+}
+i {
+    color: var(--primary-color);
+    font-size:large;
+}
+.navigation {
+    background: blue;
+    height: 9vh;
+    width: 100%;
+
+}
