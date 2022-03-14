@@ -1,15 +1,10 @@
-import React from 'react';
-import Header from "./components/Header"
+
 import './App.css';
 
-function App() {
+function App(props:any) {
   return (
     <div className="App">
-     <Header/>
-        <p>
-         Best magician
-        </p>
-   
+      {props.children}
     </div>
   );
 }
