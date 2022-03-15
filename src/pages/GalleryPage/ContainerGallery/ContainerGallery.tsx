@@ -8,6 +8,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineClose } from "react-i
 
 import styles from './ContainerGallery.module.css'
 
+import Image from './Image'
 
 const ContainerGallery = (props: any) => {
 
@@ -19,17 +20,11 @@ const ContainerGallery = (props: any) => {
     })
 
     useEffect(() => {
-
-        // if (state.num <= 0) {
-        //     setState((prevState: any) => {
-        //         return { ...prevState, num: arr.length }
-        //     })
-        // }          
         setState((prevState: any) => {
             return { ...prevState, path: arr[state.num] }
         })
 
-        console.log('From UseEffect', arr[state.num])
+        // console.log('From UseEffect', arr[state.num])
     }, [state.num])
 
 
@@ -38,14 +33,12 @@ const ContainerGallery = (props: any) => {
 
         if (arr[state.num] === undefined) {
             setState((prevState: any) => {
-                return { ...prevState, num: arr.length -1 }
+                return { ...prevState, num: arr.length - 1 }
             })
         }
         setState((prevState: any) => {
             return { ...prevState, path: arr[state.num] }
         })
-        console.log(state.path)
-        console.log(state.num)
     }
 
     const handleRightClick = () => {
@@ -59,21 +52,16 @@ const ContainerGallery = (props: any) => {
         setState((prevState: any) => {
             return { ...prevState, path: arr[state.num] }
         })
-        console.log(state.path)
-        console.log(state.num)
     }
 
     return <Modal handleClose={props.handleClose}>
         <div>
             <span className={styles.close} onClick={props.handleClose} > <AiOutlineClose /></span>
-            <img className={`${styles.img} `} key={props.imagePathLink}
-                // @ts-ignore
-                onClick={() => handleOpen(image)}
-                // @ts-ignore
-                src={state.path} alt=''
-            />
+            
+            <Image className={` ${styles.fade}`} path={state.path}/>
+
             <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
-                <span className={styles.leftArrow} onClick={handleLeftClick}><AiOutlineArrowLeft /></span>
+                <span className={`${styles.leftArrow} `} onClick={handleLeftClick}><AiOutlineArrowLeft /></span>
                 <span className={styles.rightArrow} onClick={handleRightClick}><AiOutlineArrowRight /></span>
             </div>
         </div>
