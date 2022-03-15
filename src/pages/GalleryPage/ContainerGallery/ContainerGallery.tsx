@@ -8,28 +8,37 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineClose } from "react-i
 
 import styles from './ContainerGallery.module.css'
 
+
 const ContainerGallery = (props: any) => {
 
-    useEffect(() => {
-        setState((prevState: any) => {
-            return { ...prevState, path: props.imagePathLink }
-        })
-        setState((prevState: any) => {
-            return { ...prevState, num: arr.indexOf(props.imagePathLink) }
-        })
-    }, [])
+    let arr = [...props.allImages]
 
     const [state, setState] = useState<any>({
-        path: '',
-        num: 0,
+        path: props.imagePathLink,
+        num: arr.indexOf(props.imagePathLink),
     })
-    let arr = [...props.allImages]
+
+    useEffect(() => {
+
+        // if (state.num <= 0) {
+        //     setState((prevState: any) => {
+        //         return { ...prevState, num: arr.length }
+        //     })
+        // }          
+        setState((prevState: any) => {
+            return { ...prevState, path: arr[state.num] }
+        })
+
+        console.log('From UseEffect', arr[state.num])
+    }, [state.num])
+
 
     const handleLeftClick = () => {
         state.num--
-        if (state.num <= 0) {
+
+        if (arr[state.num] === undefined) {
             setState((prevState: any) => {
-                return { ...prevState, num: arr.length }
+                return { ...prevState, num: arr.length -1 }
             })
         }
         setState((prevState: any) => {
@@ -38,11 +47,13 @@ const ContainerGallery = (props: any) => {
         console.log(state.path)
         console.log(state.num)
     }
+
     const handleRightClick = () => {
         state.num++
-        if (state.num >= arr.length - 1) {
+
+        if (arr[state.num] === undefined) {
             setState((prevState: any) => {
-                return { ...prevState, num: -1 }
+                return { ...prevState, num: 0 }
             })
         }
         setState((prevState: any) => {
@@ -51,10 +62,11 @@ const ContainerGallery = (props: any) => {
         console.log(state.path)
         console.log(state.num)
     }
+
     return <Modal handleClose={props.handleClose}>
         <div>
             <span className={styles.close} onClick={props.handleClose} > <AiOutlineClose /></span>
-            <img className={styles.img} key={props.imagePathLink}
+            <img className={`${styles.img} `} key={props.imagePathLink}
                 // @ts-ignore
                 onClick={() => handleOpen(image)}
                 // @ts-ignore

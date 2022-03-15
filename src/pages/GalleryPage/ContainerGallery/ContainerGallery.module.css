@@ -8,6 +8,7 @@
   height: 30rem;
 
   display: flex;
+  
 }
 .img:hover {
   color: white;
@@ -28,6 +29,8 @@
   transition: 0.6s ease;
   border-radius: 25% 25%;
   user-select: none;
+
+  
 }
 /* Position the "next button" to the right */
 .rightArrow {
@@ -53,3 +56,4 @@
   font-size: 40px;
   color: rgb(54, 54, 54);
 }
+

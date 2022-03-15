@@ -24,7 +24,7 @@ const GalleryPage = () => {
     }
 
     const images = importAll(require.context('../../Assets', false, /\.(png|jpe?g|svg)$/))
-
+    
     const handleOpen = (imgLink: string) => {
         setState((prevState) => {
             return { ...prevState, open: true }
