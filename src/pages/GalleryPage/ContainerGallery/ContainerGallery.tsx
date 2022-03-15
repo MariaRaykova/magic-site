@@ -17,7 +17,7 @@ const ContainerGallery = (props: any) => {
         setState((prevState: any) => {
             return { ...prevState, num: arr.indexOf(props.imagePathLink) }
         })
-    },[])
+    }, [])
 
     const [state, setState] = useState<any>({
         path: '',
@@ -25,9 +25,13 @@ const ContainerGallery = (props: any) => {
     })
     let arr = [...props.allImages]
 
-
     const handleLeftClick = () => {
         state.num--
+        if (state.num <= 0) {
+            setState((prevState: any) => {
+                return { ...prevState, num: arr.length }
+            })
+        }
         setState((prevState: any) => {
             return { ...prevState, path: arr[state.num] }
         })
@@ -36,6 +40,11 @@ const ContainerGallery = (props: any) => {
     }
     const handleRightClick = () => {
         state.num++
+        if (state.num >= arr.length - 1) {
+            setState((prevState: any) => {
+                return { ...prevState, num: -1 }
+            })
+        }
         setState((prevState: any) => {
             return { ...prevState, path: arr[state.num] }
         })
