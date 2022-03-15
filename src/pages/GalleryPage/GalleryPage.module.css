@@ -1,7 +1,7 @@
 :root {
   --leftCardColor: lightgreen;
   --midCardColor: lightblue;
-  --background: grey;
+  --background: rgb(0, 0, 0);
 }
 
 body {
@@ -21,15 +21,16 @@ body {
   grid-auto-flow: dense;
 }
 
-img {
+.img {
   max-width: 100%;
   object-fit: cover;
+  opacity: 1;
   transition: 0.5s;
+  border-radius: 10px;
 }
-img:hover {
-  opacity: 0;
-  transition: opacity 1s ease;
-  background: rgb(12, 11, 11);
+.img:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 .tall {
   grid-row: span 2;
@@ -37,10 +38,8 @@ img:hover {
 .wide {
   grid-column: span 2;
 }
-
-
 button {
-  visibility: hidden;
+  /* visibility: hidden; */
   background-color: var(--midCardColor);
   text-decoration: none;
   border: 1px solid lightsteelblue;
