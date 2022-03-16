@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Modal from '../Modal/Modal'
-import { AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineClose } from "react-icons/ai"
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai"
 
 import styles from './ContainerGallery.module.css'
 

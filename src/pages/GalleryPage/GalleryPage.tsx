@@ -6,6 +6,8 @@ import styles from "./GalleryPage.module.css"
 
 import ContainerGallery from './ContainerGallery/ContainerGallery'
 
+import Layout from '../Layout/Layout'
+
 const GalleryPage = () => {
 
     type SongType = {
@@ -40,7 +42,7 @@ const GalleryPage = () => {
         })
     }
 
-    return <div>
+    return <Layout>
 
         {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={images} handleClose={handleClose} />}
 
@@ -57,7 +59,7 @@ const GalleryPage = () => {
                 ))
             }
         </div>
-    </div>
+    </Layout>
 }
 
 export default GalleryPage
