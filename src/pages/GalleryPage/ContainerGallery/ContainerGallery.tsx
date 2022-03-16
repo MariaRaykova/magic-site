@@ -56,7 +56,7 @@ const ContainerGallery = (props: any) => {
 
     return <Modal handleClose={props.handleClose}>
         <div>            
-            <Image className={` ${styles.fade}`} path={state.path}/>
+            <Image className={` ${styles.fade}`} path={state.path} index={state.num}/>
 
             <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
                 <span className={`${styles.leftArrow} `} onClick={handleLeftClick}><AiOutlineArrowLeft /></span>
