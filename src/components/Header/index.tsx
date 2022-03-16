@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-    <div>
         <div className={styles.header}>
             <div className={styles.infoLine}>
                 <div className={styles.leftIcons}>
@@ -26,11 +25,8 @@ const Header = () => {
                 </div>
         
             </div>
-            <div className={styles.navigation}>
-          <Link to={`/`}>Начало</Link>
-          <Link to={`/gallery`}>Галерия</Link>
-      </div>
-            </div>
+       
+
 
     )
 }

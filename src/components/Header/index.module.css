@@ -22,16 +22,16 @@
 .leftIcons {
     display: flex;
     align-items: center;
-    
 }
 .rightIcons {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 
 }
 .rightIcons p {
-    margin-left:10px;
+ 
+    margin:10px;
     /* font-size: calc(5px + 2vmin); */
 }
 .iconCircle {
@@ -57,7 +57,7 @@ i {
     justify-content: center;
     /* border-top: double; */
     margin-top:5px;
-    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0 10px black;
    
 }
 .navigation a{

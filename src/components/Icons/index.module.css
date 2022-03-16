@@ -1,0 +1,13 @@
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height:20vh;
+    font-size: calc(15px + 2vmin);
+    padding: 100px;
+  }
+  .icons span img {
+    filter: invert(74%) sepia(49%) saturate(347%) hue-rotate(5deg) brightness(85%) contrast(92%);
+    width:100px;
+  }
+ 
