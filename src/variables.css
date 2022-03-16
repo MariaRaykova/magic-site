@@ -3,9 +3,10 @@
 $secondary-color: #efdccc; */
 
 :root {
-    --primary-color: #1d283d;
-    --secondary-color: #efdccc;
-
+    /* --primary-color: #1d283d; */
+    --primary-color: rgb(2, 1, 33);
+    --secondary-color: rgb(200, 172, 101);
+    --text-color: #efdccc;
     /* animation:  */
     --gird-width:30px;
     --gird-height:30px;

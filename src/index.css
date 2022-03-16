@@ -13,3 +13,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* @font-face {
+  font-family: ComforterRegular;
+  src: url('/public/font/Comforter-Regular.ttf');
+} */
+@font-face {
+  font-family: PerspectiveC;
+  src: url('/public/font/PerspectiveC.otf');
+}
