@@ -26,7 +26,7 @@ const GalleryPage = () => {
     }
 
     const images = importAll(require.context('../../Assets', false, /\.(png|jpe?g|svg)$/))
-    
+
     const handleOpen = (imgLink: string) => {
         setState((prevState) => {
             return { ...prevState, open: true }
@@ -41,16 +41,14 @@ const GalleryPage = () => {
             return { ...prevState, open: false }
         })
     }
-
     return <Layout>
-
         {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={images} handleClose={handleClose} />}
 
         <div className={`${styles.container} `}>
             {
-                images.map(image => (
+                images.map((image, index) => (
                     // @ts-ignore
-                    <img className={styles.img} key={image}
+                    <img className={index % 2 === 0 ? `${styles.tall}` : `${styles.wide}`} key={image}
                         // @ts-ignore
                         onClick={() => handleOpen(image)}
                         // @ts-ignore
