@@ -1,12 +1,14 @@
 
-import './App.css';
+import styles from './App.module.css'
 
-function App(props:any) {
+function App(props: any) {
   return (
-    <div className="App">
+    <div className={styles.App}>
+
       {props.children}
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
