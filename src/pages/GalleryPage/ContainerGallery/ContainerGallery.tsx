@@ -55,9 +55,7 @@ const ContainerGallery = (props: any) => {
     }
 
     return <Modal handleClose={props.handleClose}>
-        <div>
-            <span className={styles.close} onClick={props.handleClose} > <AiOutlineClose /></span>
-            
+        <div>            
             <Image className={` ${styles.fade}`} path={state.path}/>
 
             <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
