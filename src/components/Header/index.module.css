@@ -3,21 +3,26 @@
 .header {
     /* background-color: var(--primary-color); */
     /* min-height: 14vh; */
+    background: rgba(0, 0, 0, 0.63);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(5px + 2vmin);
     color: var(--secondary-color);
-    padding: 0 15vmin;
+    padding: 10px 15vmin;
+    /* position: fixed;
+    top: 0; */
+    z-index: 2;
+
 }
 .infoLine {
     display: flex;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
     height: 5vh;
     width: 100%;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 .leftIcons {
     display: flex;
