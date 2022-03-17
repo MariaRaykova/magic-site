@@ -34,7 +34,6 @@ function MainPage(props: any) {
 
       <ReserveSection />
       <SectionGallery />
-    </div>
 
     </Layout>
 
