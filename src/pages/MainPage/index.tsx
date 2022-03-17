@@ -4,17 +4,19 @@ import ConsultationSection from "../../components/ConsultationSection";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header"
 import Icons from "../../components/Icons";
-import Navigation from "../../components/Navigation";
 
 import ReserveSection from "../../components/ReserveSection";
 import SectionGallery from "../../components/SectionGallery";
+import Navigation from "../../components/Navigation";
+
 import styles from "./index.module.css"
+import Layout from "../Layout/Layout";
 
 function MainPage(props: any) {
   
   return (
-    <div >
-      <Header />
+    <Layout>
+      {/* <Header /> */}
       <div className={styles.main} >
       <Navigation />
         <p className={styles.imageWrapper}>
@@ -31,11 +33,12 @@ function MainPage(props: any) {
         </p>
       </div>
       <Icons />
+
       <ReserveSection />
       <SectionGallery />
       <ConsultationSection />
       <Footer />
-    </div>
+      </Layout>
   );
 }
 
