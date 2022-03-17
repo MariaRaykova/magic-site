@@ -1,20 +1,30 @@
-.img {
-  max-width: 100%;
+
+.image {
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
-  color: black;
-  
-  height: 35rem;
-  
-  display: flex;
-  
-  transition: all 1s;
-}
-.img:hover {
-  max-width: 100%;
-  height: 36rem;
+  color: rgb(255, 255, 255);
 
+  height: 35rem;
+
+  display: flex;
+  justify-content: center;
+  
+  grid-auto-flow: dense;
+  /* overflow: hidden; */
+
+  transition: all 0.5s ease;
+  opacity: 0;
 }
+.active {
+  opacity: 1;
+}
+.image:hover {
+  cursor: pointer;
+  width: 100%;
+  height: 38rem;
+}
+
 
 .leftArrow,
 .rightArrow {
@@ -31,8 +41,6 @@
   transition: 0.6s ease;
   border-radius: 25% 25%;
   user-select: none;
-
-  
 }
 /* Position the "next button" to the right */
 .rightArrow {
@@ -46,24 +54,7 @@
   background-color: rgba(107, 107, 107, 0.5);
 }
 
-.fade-enter img {
-  opacity: 0;
-  transform: translateX(-100%);
+#fade {
+  transition: all 2s ease-out;
+  transition-delay: 2s;
 }
-.fade-enter-active img {
-  opacity: 1;
-  transform: translateX(0%);
-}
-.fade-exit img {
-  opacity: 1;
-  transform: translateX(0%);
-}
-.fade-exit-active img {
-  opacity: 0;
-  transform: translateX(100%);
-}
-.fade-enter-active img,
-.fade-exit-active img {
-  transition: opacity 500ms, transform 500ms;
-}
-

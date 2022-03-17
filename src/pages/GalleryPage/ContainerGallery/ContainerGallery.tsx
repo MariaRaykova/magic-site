@@ -1,14 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import Modal from '../Modal/Modal'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai"
+import { AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineClose } from "react-icons/ai"
 
 import styles from './ContainerGallery.module.css'
 
-import Image from './Image'
 
 const ContainerGallery = (props: any) => {
 
@@ -54,9 +54,37 @@ const ContainerGallery = (props: any) => {
         })
     }
 
+    const slidePresentationTime = 50 // after how many ms slide will change - now 3s / 3000ms
+    const [currentSlide, setCurrentSlide] = useState(0) // value and function to set currrent slide index
+    let sliderInterval = useRef() // interval ref
+
+    useEffect(() => {
+        // @ts-ignore
+        sliderInterval = setInterval(() => {
+            setCurrentSlide((state.num )) // change current slide to next slide after 'slidePresentationTime'
+        }, slidePresentationTime)
+
+        
+        // cleanup interval when your component will unmount
+        return () => {
+            // @ts-ignore
+            clearInterval(sliderInterval)
+        }
+    })
+
     return <Modal handleClose={props.handleClose}>
-        <div>            
-            <Image className={` ${styles.fade}`} path={state.path} index={state.num}/>
+        <div>
+            {/* <Image className={` ${styles.fade}`} path={state.path} index={state.num}/> */}
+
+            <img
+                key={state.num}
+                id={state.num}
+                className={state.num === currentSlide ? `${styles.image} ${styles.active}` : styles.image}
+                src={state.path} alt=''
+                // style={{
+                //     zIndex: `-${state.num}`
+                // }}
+            />
 
             <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
                 <span className={`${styles.leftArrow} `} onClick={handleLeftClick}><AiOutlineArrowLeft /></span>
