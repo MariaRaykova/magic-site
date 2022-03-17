@@ -11,7 +11,7 @@ function MainPage(props: any) {
   
   return (
     <div>
-    <Layout>
+    {/* <Layout> */}
 
       <div className={styles.main} >
     
@@ -35,7 +35,7 @@ function MainPage(props: any) {
 
       <ConsultationSection />
       <Footer />
-      </Layout>
+      {/* </Layout> */}
       </div>
 
   );
