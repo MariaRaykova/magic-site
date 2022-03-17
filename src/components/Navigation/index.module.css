@@ -1,14 +1,22 @@
 .navigation {
     position:sticky;
-    padding: 20px 15vmin;
+    top: 0;
+    padding: 12px 15vmin;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: inset 0px 7px 5px -3px var(--secondary-color);
+    box-shadow: inset -1px 7px 5px -3px var(--secondary-color);
     font-size: calc(8px + 2vmin);
+    /* position: fixed; */
+    background: rgba(0, 0, 0, 0.50);
+    z-index: 12;
+/* width: 100%;
+transition: all 3s; */
+
 
 }
+
 .navigation a{
     margin-right: 30px;
     color: var(--text-color);

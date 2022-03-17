@@ -1,19 +1,20 @@
-
-
-
-import Icons from "../../components/Icons";
+import ConsultationSection from "../../components/ConsultationSection";
+import Footer from "../../components/Footer";
+import IconsSection from "../../components/IconsSection";
 import ReserveSection from "../../components/ReserveSection";
 import SectionGallery from "../../components/SectionGallery";
+
 import styles from "./index.module.css"
 import Layout from "../Layout/Layout";
 
 function MainPage(props: any) {
   
   return (
-    <Layout >
-      {/* <Header />
-      <Navigation /> */}
+    <div>
+    {/* <Layout> */}
+
       <div className={styles.main} >
+    
         <p className={styles.imageWrapper}>
           <div className={styles.imageWrapper}>
             <div className={styles.headerWrapper}>
@@ -27,12 +28,15 @@ function MainPage(props: any) {
         </p>
         </p>
       </div>
-      <Icons />
+      <IconsSection />
 
       <ReserveSection />
       <SectionGallery />
 
-    </Layout>
+      <ConsultationSection />
+      <Footer />
+      {/* </Layout> */}
+      </div>
 
   );
 }

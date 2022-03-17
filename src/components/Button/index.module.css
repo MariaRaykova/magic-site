@@ -1,18 +1,18 @@
-.buttonMain{
-    font-family: PerspectiveC;
-    color: var(--text-color);
-    font-size: 5vmin;
-    border: 1px solid var(--secondary-color);
-    border-radius: 30px;
-    background: var(--primary-color);
-    width: 250px;
-    height: 50px;
-    margin: 0 auto;
-    padding: 0;
-    display: inline-block;
-    line-height: 50px;
-    text-align: center;
 
+.buttonMain{
+  font-family: PerspectiveC;
+  color: var(--text-color);
+  font-size: 5vmin;
+  border: 1px solid var(--secondary-color);
+  border-radius: 30px;
+  background: var(--primary-color);
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
   }
   .buttonMain:hover{
     background: var(--secondary-color);
