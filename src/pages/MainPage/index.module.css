@@ -9,9 +9,8 @@
   justify-content: center;
   font-size: calc(5px + 2vmin);
   color: var(--secondary-color);
+  position: relative;
 }
-
-
 .imageWrapper{
   display:flex;
   justify-content: flex-end;
@@ -36,7 +35,7 @@
   flex-direction: column;
   justify-content: center;
   flex: 1 1 50%;
-    margin-left:100px;
+    /* margin-left:100px; */
 }
 
 .video {
@@ -52,3 +51,29 @@
     }
   }
   
+  @media only screen and (max-width: 1060px) {
+    .imageWrapper{
+      display:flex;
+      justify-content: center;
+      width:60%;
+      flex-wrap: wrap;
+
+    }
+    .imageWrapper h1 {
+      font-family: PerspectiveC;
+      font-size: 8vmin;
+      flex-wrap: wrap;
+    }
+    .imageWrapper p {
+      font-family: PerspectiveC;
+      color: var(--text-color);
+      font-size: 3vmin;
+      flex-wrap: wrap;
+    }
+    .headerWrapper {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
