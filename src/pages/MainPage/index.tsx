@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import ConsultationSection from "../../components/ConsultationSection";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header"
-import Icons from "../../components/Icons";
+import IconsSection from "../../components/IconsSection";
 
 import ReserveSection from "../../components/ReserveSection";
 import SectionGallery from "../../components/SectionGallery";
@@ -15,10 +15,11 @@ import Layout from "../Layout/Layout";
 function MainPage(props: any) {
   
   return (
+    <div>
     <Layout>
-      {/* <Header /> */}
+
       <div className={styles.main} >
-      <Navigation />
+    
         <p className={styles.imageWrapper}>
           <div className={styles.imageWrapper}>
             <div className={styles.headerWrapper}>
@@ -32,13 +33,14 @@ function MainPage(props: any) {
         </p>
         </p>
       </div>
-      <Icons />
+      <IconsSection />
 
       <ReserveSection />
       <SectionGallery />
       <ConsultationSection />
       <Footer />
       </Layout>
+      </div>
   );
 }
 
