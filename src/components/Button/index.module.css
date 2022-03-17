@@ -1,14 +1,20 @@
-.button{
+.buttonMain{
     font-family: PerspectiveC;
     color: var(--text-color);
-    text-align: center;
     font-size: 5vmin;
-    padding: 10px 100px;
     border: 1px solid var(--secondary-color);
     border-radius: 30px;
     background: var(--primary-color);
-    vertical-align: middle;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+
   }
-  .button:hover{
+  .buttonMain:hover{
     background: var(--secondary-color);
   }
+  
