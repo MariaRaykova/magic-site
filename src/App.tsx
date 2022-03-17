@@ -1,5 +1,6 @@
 
-import styles from './App.module.css'
+
+import styles from './App.module.css';
 
 function App(props: any) {
   return (

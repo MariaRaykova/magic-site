@@ -1,0 +1,15 @@
+.sectionTitle h1{
+    font-family: PerspectiveC;
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 15vmin;
+    padding: 30px 0;
+  }
+  .sectionTitle {
+    font-family: PerspectiveC;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 5vmin;
+    padding: 30px 0;
+  }
+ 
