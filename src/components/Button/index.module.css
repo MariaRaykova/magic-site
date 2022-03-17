@@ -1,0 +1,14 @@
+.button{
+    font-family: PerspectiveC;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 5vmin;
+    padding: 10px 100px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 30px;
+    background: var(--primary-color);
+    vertical-align: middle;
+  }
+  .button:hover{
+    background: var(--secondary-color);
+  }
