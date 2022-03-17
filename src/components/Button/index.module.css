@@ -1,5 +1,5 @@
 
-.button{
+.buttonMain{
   font-family: PerspectiveC;
   color: var(--text-color);
   font-size: 5vmin;
@@ -13,8 +13,6 @@
   display: inline-block;
   line-height: 50px;
   text-align: center;
-
-
   }
   .buttonMain:hover{
     background: var(--secondary-color);
