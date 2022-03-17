@@ -1,12 +1,9 @@
 
-import { useEffect } from "react";
+
 
 import Icons from "../../components/Icons";
-
 import ReserveSection from "../../components/ReserveSection";
 import SectionGallery from "../../components/SectionGallery";
-
-
 import styles from "./index.module.css"
 import Layout from "../Layout/Layout";
 
@@ -34,7 +31,6 @@ function MainPage(props: any) {
 
       <ReserveSection />
       <SectionGallery />
-    </div>
 
     </Layout>
 
