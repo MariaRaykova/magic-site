@@ -3,7 +3,7 @@ import styles from "./index.module.css"
 import { Link } from "react-router-dom";
 
 const Icons = () => {
-    //https://codepen.io/sosuke/pen/Pjoqqp - Generate filter
+   
     return (
         <div className={styles.icons}>
         <span>

@@ -10,7 +10,7 @@ import 'swiper/css/effect-coverflow';
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 
-const Pictures = () => {
+const PhotosSection = () => {
     return (
         <Swiper
             effect="coverflow"
@@ -49,4 +49,4 @@ const Pictures = () => {
     )
 
 }
-export default Pictures;
+export default PhotosSection;

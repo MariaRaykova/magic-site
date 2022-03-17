@@ -3,7 +3,9 @@ import { useEffect } from "react";
 import Header from "../../components/Header"
 import Icons from "../../components/Icons";
 import Navigation from "../../components/Navigation";
-import SwiperCoverflow from "../../components/Photos";
+
+import ReserveSection from "../../components/ReserveSection";
+import SectionGallery from "../../components/SectionGallery";
 import styles from "./index.module.css"
 
 function MainPage(props: any) {
@@ -27,7 +29,8 @@ function MainPage(props: any) {
         </p>
       </div>
       <Icons />
-      <SwiperCoverflow />
+      <ReserveSection />
+      <SectionGallery />
     </div>
   );
 }
