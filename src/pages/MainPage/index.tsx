@@ -1,19 +1,21 @@
 
 import { useEffect } from "react";
-import Header from "../../components/Header"
+
 import Icons from "../../components/Icons";
-import Navigation from "../../components/Navigation";
 
 import ReserveSection from "../../components/ReserveSection";
 import SectionGallery from "../../components/SectionGallery";
+
+
 import styles from "./index.module.css"
+import Layout from "../Layout/Layout";
 
 function MainPage(props: any) {
   
   return (
-    <div >
-      <Header />
-      <Navigation />
+    <Layout >
+      {/* <Header />
+      <Navigation /> */}
       <div className={styles.main} >
         <p className={styles.imageWrapper}>
           <div className={styles.imageWrapper}>
@@ -29,9 +31,13 @@ function MainPage(props: any) {
         </p>
       </div>
       <Icons />
+
       <ReserveSection />
       <SectionGallery />
     </div>
+
+    </Layout>
+
   );
 }
 
