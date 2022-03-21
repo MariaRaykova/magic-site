@@ -1,6 +1,7 @@
 :root {
     --primary-color: rgb(2, 1, 33);
     --secondary-color: rgb(200, 172, 101);
+    --highlight-secondary-color: rgb(238, 209, 137);
     --text-color: #efdccc;
     --header-font-size: 10vmin;
     --text-font-size: 6vmin;
