@@ -74,16 +74,11 @@ const ContainerGallery = (props: any) => {
 
     return <Modal handleClose={props.handleClose}>
         <div>
-            {/* <Image className={` ${styles.fade}`} path={state.path} index={state.num}/> */}
-
             <img
                 key={state.num}
                 id={state.num}
                 className={state.num === currentSlide ? `${styles.image} ${styles.active}` : styles.image}
                 src={state.path} alt=''
-                // style={{
-                //     zIndex: `-${state.num}`
-                // }}
             />
 
             <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>

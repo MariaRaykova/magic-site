@@ -1,13 +1,10 @@
-
-
 import ConsultationSection from "../../components/ConsultationSection";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header"
 import IconsSection from "../../components/IconsSection";
-
+import Icons from "../../components/IconsSection";
 import ReserveSection from "../../components/ReserveSection";
 import SectionGallery from "../../components/SectionGallery";
-import Navigation from "../../components/Navigation";
 
 import styles from "./index.module.css"
 import Layout from "../Layout/Layout";
@@ -21,9 +18,11 @@ const MainPage = () =>{
       <IconsSection />
       <ReserveSection />
       <SectionGallery />
+
       <ConsultationSection />
       </Layout>
       </div>
+
   );
 }
 

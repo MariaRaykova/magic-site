@@ -1,3 +1,4 @@
+
 .button{
   font-family: PerspectiveC;
   color: var(--text-color);
@@ -13,7 +14,9 @@
   line-height: 50px;
   text-align: center;
 
+
   }
-  .button:hover{
+  .buttonMain:hover{
     background: var(--secondary-color);
   }
+  
