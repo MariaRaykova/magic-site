@@ -60,21 +60,3 @@ body {
   opacity: 0.5;
 }
 
-button {
-  /* visibility: hidden; */
-  /* background-color: var(--midCardColor); */
-  text-decoration: none;
-  border: 1px solid lightsteelblue;
-  border-radius: 5px;
-  outline: none;
-  height: 25px;
-  margin-left: 10px;
-}
-button:hover {
-  background-color: rgb(208, 227, 233);
-  transition: 0.5s;
-}
-button:active {
-  position: relative;
-  top: 1px;
-}
