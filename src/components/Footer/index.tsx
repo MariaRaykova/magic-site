@@ -29,7 +29,6 @@ const Footer = () => {
             </div>
             <div className={styles.gallery}>
                 <h1 className={styles.title}>Галерия</h1>
-             
                     <img src="/images/image0.jpeg" />
                     <img src="/images/image0.jpeg" />
                     <img src="/images/image0.jpeg" />
@@ -39,7 +38,6 @@ const Footer = () => {
                     <img src="/images/image0.jpeg" />
                     <img src="/images/image0.jpeg" />
                     <img src="/images/image0.jpeg" />
-              
             </div>
             {/* <a target="_blank" href="https://icons8.com/icon/6wPGrsF25bmU/magic">Magic icon by Icons8</a> */}
         </div>

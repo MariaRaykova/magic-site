@@ -10,7 +10,7 @@
     justify-content: center;
     font-size: calc(5px + 2vmin);
     color: var(--secondary-color);
-    padding: 10px 15vmin;
+    padding: var(--main-padding);
     /* position: fixed;
     top: 0; */
     z-index: 2;
