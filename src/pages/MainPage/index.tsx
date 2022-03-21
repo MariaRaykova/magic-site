@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+
 import ConsultationSection from "../../components/ConsultationSection";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header"
@@ -11,34 +11,17 @@ import Navigation from "../../components/Navigation";
 
 import styles from "./index.module.css"
 import Layout from "../Layout/Layout";
+import IntroSection from "../../components/IntroSection";
 
-function MainPage(props: any) {
-  
+const MainPage = () =>{
   return (
     <div>
     <Layout>
-
-      <div className={styles.main} >
-    
-        <p className={styles.imageWrapper}>
-          <div className={styles.imageWrapper}>
-            <div className={styles.headerWrapper}>
-              <h1>Зойко Миленков</h1>
-              <p>"Моят талант е не толкова да правя фокуси, колкото да вдъхновявам" </p>
-            </div>
-            <img src="/images/image1.png"></img>
-          </div>
-          <p className={styles.animation}>
-          <video className={styles.video} src="/images/smoke.mp4" autoPlay muted loop></video>
-        </p>
-        </p>
-      </div>
+      <IntroSection />
       <IconsSection />
-
       <ReserveSection />
       <SectionGallery />
       <ConsultationSection />
-      <Footer />
       </Layout>
       </div>
   );
