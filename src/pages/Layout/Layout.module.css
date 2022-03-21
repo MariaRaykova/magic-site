@@ -4,9 +4,10 @@ body {
     background-color: var(--primary-color);
   }
   .container {
-
     background-color: var(--primary-color);
-    padding: 200px;
+    padding: 100px;
 
   }
+  
+
   
