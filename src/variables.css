@@ -1,20 +1,9 @@
-
-/* $primary-color: #1d283d;
-$secondary-color: #efdccc; */
-
 :root {
-    /* --primary-color: #1d283d; */
     --primary-color: rgb(2, 1, 33);
     --secondary-color: rgb(200, 172, 101);
     --highlight-secondary-color: rgb(238, 209, 137);
     --text-color: #efdccc;
-    /* animation:  */
-    --gird-width:30px;
-    --gird-height:30px;
-    --line-color:#999;
-    --dot-color:#ccc;
-    --dot-size:2px;
-    --point-gap-width:calc(var(--gird-width) * 4);
-    --point-gap-height:calc(var(--gird-height) * 4);;
+    --header-font-size: 10vmin;
+    --text-font-size: 6vmin;
   }
   

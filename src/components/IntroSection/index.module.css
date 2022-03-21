@@ -1,0 +1,71 @@
+.intro {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: PerspectiveC;
+  position: relative;
+}
+.videoWrapper .overlay {
+  background: rgba(2, 1, 33, 0.9);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.videoWrapper {
+  height: 100vh;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.imageWrapper {
+  z-index: 1;
+  padding-right: 15vmin;
+  flex: 1 1 50%;
+}
+.imageWrapper img {
+  padding-top: 10vmin;
+  z-index: 1;
+  height: 100%;
+  width: auto;
+}
+.intro h1 {
+  color: var(--secondary-color);
+  font-size: var(--header-font-size);
+  padding-bottom: 30px;
+}
+.intro p {
+  color: var(--text-color);
+  font-size: var(--text-font-size);
+  flex-wrap: wrap;
+}
+.headerWrapper {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  z-index: 2;
+  padding-left: 15vmin;
+  width:50%;
+}
+@media only screen and (max-width: 1060px) {
+  .imageWrapper{
+    display:flex;
+    justify-content: center;
+    width:60%;
+    flex-wrap: wrap;
+
+  }
+  
+}

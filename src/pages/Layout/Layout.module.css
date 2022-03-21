@@ -1,12 +1,11 @@
 
-
 body {
     background-color: var(--primary-color);
   }
   .container {
     background-color: var(--primary-color);
-    padding: 100px;
-
+    width: 100%;
+    height: 100%;
   }
   
 
