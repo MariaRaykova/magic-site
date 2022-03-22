@@ -1,18 +1,17 @@
 import styles from "./index.module.css"
 import SectionText from "../SectionText";
-
+import { useTranslation } from "react-i18next";
 const ReserveSection = () => {
+    const { t } = useTranslation();
     return (
         <div className={styles.reserve}>
              <div className={styles.textWrapper} >
-                 <SectionText title="Резервирайте Вашето Шоу" text="Телефон: +359 88 888 888">
-            {/* <h1 className={styles.title}>Резервирайте Вашето Шоу</h1> */}
+                 <SectionText title={t('reservationSection.title')} text={t('phone')}>
             <ul className={styles.items}>
-                    <li className={styles.check}>Магическо шоу</li>
-                    <li className={styles.check}>Частни програми</li>
-                    <li className={styles.check}>Сценични участия</li>
+                    <li className={styles.check}>{t('reservationSection.item1')}</li>
+                    <li className={styles.check}>{t('reservationSection.item2')}</li>
+                    <li className={styles.check}>{t('reservationSection.item3')}</li>
                 </ul>
-            {/* <p>Телефон: +359 88 888 888</p> */}
             </SectionText>
             </div>
         </div>

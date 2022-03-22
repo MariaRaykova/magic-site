@@ -64,3 +64,24 @@ i {
     color: var(--secondary-color);
     text-decoration: none;
 }
+.buttons {
+    display:flex;
+    align-items: center;
+}
+.button{
+    color: var(--text-color);
+    font-size: 2vmin;
+    border: 1px solid var(--secondary-color);
+    border-radius: 30px;
+    background: var(--primary-color);
+    width: 5vmin;
+    height: 3vmin;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    /* line-height: 50px; */
+    text-align: center;
+    }
+    .buttonMain:hover{
+      background: var(--secondary-color);
+    }
