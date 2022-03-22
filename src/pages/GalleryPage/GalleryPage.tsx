@@ -10,12 +10,12 @@ import Layout from '../Layout/Layout'
 
 const GalleryPage = () => {
 
-    type SongType = {
+    type type = {
         open: Boolean,
         imgPath: string,
     }
 
-    const [state, setState] = useState<SongType>({
+    const [state, setState] = useState<type>({
         open: false,
         imgPath: '',
     })

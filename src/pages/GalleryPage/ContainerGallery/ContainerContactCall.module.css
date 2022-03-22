@@ -1,0 +1,59 @@
+
+.containerIn {
+  background-color: rgb(0 0 0 / 0.8);
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--contact-color);
+  box-shadow: 0px 2px 28px rgba(107, 49, 129, 0.25);
+}
+
+.buttonSend {
+  color: white;
+  background-color:var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);
+  font-family: PerspectiveC;
+  font-size: 1.4rem;
+  padding: 15px;
+  width: 15rem;
+}
+.buttonSend:hover {
+  background-color: var(--contact-color);
+  transition: 0.5s;
+}
+.buttonSend:active {
+  position: relative;
+  top: 1px;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--contact-color);
+  border-color: var(--contact-color);
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  color: var(--secondary-color);
+  font-family: PerspectiveC;
+  font-size: 20px;
+  padding-left: 50px;
+  /* border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden; */
+}
+
+input:focus {
+  /* border: 1px solid var(--highlight-secondary-color); */
+  box-shadow: 0 0 10px var(--highlight-gallery-color);
+}
+
+.inputWrapper {
+  width: 100%;
+  position: relative;
+}

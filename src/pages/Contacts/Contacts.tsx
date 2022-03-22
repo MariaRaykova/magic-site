@@ -1,19 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Layout from '../Layout/Layout'
 
 import styles from './Contacts.module.css'
 
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagramSquare } from "react-icons/fa"
+import ContactSmall from '../GalleryPage/ContainerGallery/ContainerContactCall'
 
 
 const Contacts = () => {
+
+  type type = {
+    open: Boolean,
+  }
+
+  const [state, setState] = useState<type>({
+    open: false,
+  })
 
   const handleChange = () => {
 
   }
 
+  const handleOpen = () => {
+    setState((prevState) => {
+      return { ...prevState, open: true }
+    })
+  }
+
+  const handleClose = () => {
+    setState((prevState) => {
+      return { ...prevState, open: false }
+    })
+  }
+
   return <Layout>
+
+    {state.open && <ContactSmall handleClose={handleClose} />}
 
     <div className={styles.reserve}>
       <h1 className={styles.textWrapper}>Свържете се с мен</h1>
@@ -30,7 +53,7 @@ const Contacts = () => {
         <span className={styles.textCall}><FaEnvelope style={{ color: 'var(--secondary-color)', fontSize: '1rem', marginRight: '5px' }} /> zojko@childish.eu </span>
         <p></p>
         <span style={{ color: 'var(--secondary-color)', fontSize: '1.5rem', marginRight: '5px' }}> <FaFacebook /> <FaInstagramSquare /> </span>
-        <button className={styles.buttonCall}>Заявете обаждане</button>
+        <button className={styles.buttonCall} onClick={handleOpen}>Заявете обаждане</button>
       </div>
 
       <div className={styles.containerIn}>
