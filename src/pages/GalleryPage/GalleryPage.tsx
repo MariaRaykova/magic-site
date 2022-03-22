@@ -42,6 +42,10 @@ const GalleryPage = () => {
         })
     }
     return <Layout>
+        <div className={styles.reserve}>
+            <h1 className={styles.textWrapper}>Галерия</h1>
+        </div>
+
         {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={images} handleClose={handleClose} />}
 
         <div className={`${styles.container} `}>
@@ -57,6 +61,7 @@ const GalleryPage = () => {
                 ))
             }
         </div>
+        <div className={styles.reserve}></div>
     </Layout>
 }
 

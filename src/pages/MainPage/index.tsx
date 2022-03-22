@@ -11,7 +11,7 @@ import IntroSection from "../../components/IntroSection";
 const MainPage = () =>{
   return (
     <div>
-    <Layout>
+    {/* <Layout> */}
       <IntroSection />
       <div className={styles.main} >
         <p className={styles.imageWrapper}>
@@ -31,7 +31,7 @@ const MainPage = () =>{
       <ReserveSection />
       <SectionGallery />
       <ConsultationSection />
-      </Layout>
+      {/* </Layout> */}
       </div>
   );
 }

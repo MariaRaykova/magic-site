@@ -27,29 +27,13 @@
   width: 100%;
   height: 100%;
   background-size: 100%;
-  /* background: url(/public/images/layered-waves-haikei7.svg) bottom no-repeat,
-    url(/public/images/layered-waves-haikei6.svg) top no-repeat;
-  content: ""; */
 }
 .textWrapper {
   position: relative;
   font-family: PerspectiveC;
+  font-size: 7vmin;
   color: var(--text-color);
   text-align: center;
-}
-.textWrapper h1 {
-  font-size: 10vmin;
-  padding-bottom: 10px;
-}
-.textWrapper p {
-  font-size: 5vmin;
-}
-.textWrapper .section {
-  font-size: 5vmin;
-}
-.textWrapper .section span i {
-  background-color: var(--secondary-color);
-  font-size: 3vmin;
 }
 
 .mainContainer {
@@ -60,17 +44,24 @@
   padding-bottom: 50px;
 }
 .call {
-  width: 35rem;
+  width: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 50px;
   padding: 4rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--contact-color);
   border-radius: 5px;
   margin: 10px;
   margin-right: 53px;
 }
+
+.containerIn {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .textCall {
   color: rgb(121, 120, 120);
   font-size: 2vmin;
@@ -94,7 +85,7 @@
 }
 
 .buttonCall:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--contact-color);
   transition: 0.5s;
 }
 .buttonCall:active {
@@ -114,16 +105,12 @@
   width: 15rem;
 }
 .buttonSend:hover {
-  background-color: var(--highlight-secondary-color);
+  background-color: var(--contact-color);
   transition: 0.5s;
 }
 .buttonSend:active {
   position: relative;
   top: 1px;
-}
-.containerIn {
-  display: flex;
-  flex-direction: column;
 }
 
 .title {
@@ -134,7 +121,7 @@
 textarea {
   width: 100%;
   outline: none;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--contact-color);
   border-radius: 5px;
   background-color: var(--primary-color);
   padding: 10px;
@@ -147,15 +134,15 @@ textarea {
 
 textarea:focus {
   /* border: 1px solid var(--highlight-secondary-color); */
-  box-shadow: 0 0 10px var(--highlight-secondary-color);
+  box-shadow: 0 0 10px var(--highlight-gallery-color);
 }
 
 input {
   width: 100%;
   outline: none;
   border-radius: 5px;
-  border: 1px solid var(--secondary-color);
-  border-color: var(--secondary-color);
+  border: 1px solid var(--contact-color);
+  border-color: var(--contact-color);
   background-color: var(--primary-color);
   padding: 10px;
   margin: 10px 0px 10px 0px;
@@ -171,7 +158,7 @@ input {
 
 input:focus {
   /* border: 1px solid var(--highlight-secondary-color); */
-  box-shadow: 0 0 10px var(--highlight-secondary-color);
+  box-shadow: 0 0 10px var(--highlight-gallery-color);
 }
 
 .inputWrapper {
