@@ -9,6 +9,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: PerspectiveC;
+  text-align: center;
+  padding: var(--main-padding);
 }
 .reserve::before {
   content: "";
@@ -34,23 +37,26 @@
 .textWrapper {
   position:relative;
   font-family: PerspectiveC;
-  color: var(--text-color);
   text-align: center;
-  
-}
-.textWrapper h1 {
-  font-size: 10vmin;
-  padding-bottom:10px;
-}
-.textWrapper p {
-  font-size: 5vmin;
-}
-.textWrapper .section {
-  font-size: 5vmin;
-}
-.textWrapper .section span i {
-  background-color: var(--secondary-color);
-  font-size: 3vmin;
+ 
 }
 
-
+.items {
+  display:flex;
+  justify-content: space-between;
+  list-style: none;
+  text-align: start;
+  padding-left: 0;
+  color: var(--text-color);
+  font-size: 5vmin;
+}
+.check{
+  padding-right:20px;
+}
+.check::before {
+  content: "\2714";
+  padding-right: 3px;
+  color: var(--secondary-color);
+  width:30px;
+  height: 30px;
+}

@@ -6,22 +6,17 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: inset -1px 7px 5px -3px var(--secondary-color);
-    font-size: calc(8px + 2vmin);
-    /* position: fixed; */
-    background: rgba(0, 0, 0, 0.50);
+    box-shadow: inset -1px 7px 5px -3px rgb(28, 28, 94);
+    font-size:4vmin;
+    background-color: var(--primary-color);
     z-index: 12;
-/* width: 100%;
-transition: all 3s; */
-
-
 }
-
 .navigation a{
     margin-right: 30px;
     color: var(--text-color);
     text-decoration: none;
 }
-.active{
-    color: var(--secondary-color);
+.active {
+    color: var(--secondary-color) !important;
+    text-decoration: underline !important;
 }

@@ -1,12 +1,12 @@
 import styles from "./index.module.css"
-
+import SectionText from "../SectionText";
 
 const ConsultationSection = () => {
     return (
         <div className={styles.consultation}>
              <div className={styles.textWrapper}>
-            <h1>Консулатции и резарвация</h1>
-            <p>Телефон: +359 88 888 888</p>
+             <SectionText title="Консулатции и резарвация" text="Телефон: +359 88 888 888">
+            </SectionText>
             </div>
         </div>
     )

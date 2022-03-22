@@ -41,7 +41,7 @@
   height: 100%;
   width: auto;
 }
-.intro h1 {
+/* .intro h1 {
   color: var(--secondary-color);
   font-size: var(--header-font-size);
   padding-bottom: 30px;
@@ -50,7 +50,7 @@
   color: var(--text-color);
   font-size: var(--text-font-size);
   flex-wrap: wrap;
-}
+} */
 .headerWrapper {
   display:flex;
   flex-direction:column;
@@ -65,7 +65,14 @@
     justify-content: center;
     width:60%;
     flex-wrap: wrap;
-
   }
-  
+}
+@media only screen and (max-width: 800px) {
+  .imageWrapper{
+    display:flex;
+    justify-content: center;
+    width:40%;
+    height:80%;
+    flex-wrap: wrap;
+  }
 }

@@ -1,16 +1,16 @@
 import styles from "./index.module.css"
 import PhotosSection from "../PhotosSection"
 import Button from "../Button";
+import SectionText from "../SectionText";
 
-const SectionTitle = () => {
+const SectionGallery = () => {
     return (
-        <div className={styles.sectionTitle}>
-   
-            <h1>Шоу Програми Галерия</h1>
+        <div className={styles.gallery}>
+            <SectionText title="Шоу Програми Галерия" text="Вижте още развлекателни програми">
             <PhotosSection />
-            <p>Вижте още развлекателни програми</p>
+            </SectionText>
             <Button />
         </div>
     )
 }
-export default SectionTitle ;
+export default SectionGallery;

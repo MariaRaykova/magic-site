@@ -1,5 +1,5 @@
 import styles from "./index.module.css"
-
+import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagramSquare } from "react-icons/fa"
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -7,25 +7,17 @@ const Header = () => {
         <div className={styles.header}>
             <div className={styles.infoLine}>
                 <div className={styles.leftIcons}>
-                    <span className={styles.iconCircle}>
-                        <i className="bi bi-facebook"></i>
-                    </span>
-                    <span className={styles.iconCircle}>
-                        <i className="bi bi-instagram"></i>
-                    </span>
+                    <span style={{ color: 'var(--secondary-color)', fontSize: '1.5rem', marginRight: '5px' }}> <FaFacebook /> <FaInstagramSquare /> </span>
                 </div>
                 <div className={styles.rightIcons}>
-                    <span className={styles.iconCircle}>
-                        <i className="bi bi-telephone-fill"></i>
+                    <span className={styles.textCall}><FaPhoneAlt style={{ color: 'var(--secondary-color)', fontSize: '1rem', marginRight: '5px' }} />
+                        +359 <span style={{ color: 'var(--text-color)' }}>(888)</span> 888888
                     </span>
-                    <p>
-                        +359 88 888 888
-                    </p>
                 </div>
-                </div>
-        
             </div>
-       
+
+        </div>
+
 
 
     )
