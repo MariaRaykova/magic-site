@@ -2,6 +2,9 @@
     --primary-color: rgb(2, 1, 33);
     --secondary-color: rgb(200, 172, 101);
     --highlight-secondary-color: rgb(238, 209, 137);
+    --gallery-color: rgb(46, 4, 80);
+    --highlight-gallery-color: rgb(139, 40, 182);
+    --contact-color: rgb(73, 0, 104);
     --text-color: #efdccc;
     --header-font-size: 10vmin;
     --text-font-size: 6vmin;
