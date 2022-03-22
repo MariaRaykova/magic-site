@@ -1,9 +1,10 @@
 .reserve {
   position: relative;
-  background-image: url(/public/images/cover.png);
+  background-image: url(/public/images/cover.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: var(--primary-color);
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -38,7 +39,6 @@
   position:relative;
   font-family: PerspectiveC;
   text-align: center;
- 
 }
 
 .items {

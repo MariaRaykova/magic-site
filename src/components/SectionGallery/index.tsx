@@ -9,7 +9,7 @@ const SectionGallery = () => {
             <SectionText title="Шоу Програми Галерия" text="Вижте още развлекателни програми">
             <PhotosSection />
             </SectionText>
-            <Button />
+            <Button name="Галерия"/>
         </div>
     )
 }
