@@ -1,10 +1,11 @@
 .footer {
-  height: 18vh;
   display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 6vmin;
+  grid-template-columns: repeat(3, 30%);
+  grid-column-gap: 5vmin;
+  padding: var(--main-padding);
   font-family: PerspectiveC;
-  font-size: 4vmin;
+  font-size: 3vmin;
+  color: var(--secondary-color)
 }
 .title {
   font-size: 6vmin;
@@ -14,28 +15,39 @@
   list-style: none;
   text-align: start;
   padding-left: 0;
+  color: var(--text-color)
 }
 .arrow::before {
   content: "\27A2";
   padding-right: 10px;
   color: var(--secondary-color);
   font-weight: bold;
+  width:30px;
+  height: 30px;
 }
-.contacts {
+.contacts, .follow {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+}
+.text {
+  color: var(--text-color);
+  font-size: 3vmin;
+  text-align: start;
 }
 .phone::before {
   content: "\2706";
   padding-right: 10px;
   color: var(--secondary-color);
+  font-size: 5vmin;
   font-weight: bold;
 }
 .email::before {
   content: "\2709";
   padding-right: 10px;
   color: var(--secondary-color);
+  font-size: 5vmin;
   font-weight: bold;
 }
 .icons {
@@ -46,29 +58,31 @@
 .iconCircle {
   border-radius: 50%;
   background: var(--secondary-color);
-  width: 25px;
-  height: 25px;
+  width: 4vmin;
+  height: 4vmin;
   display: flex;
-  line-height:30px;
-  justify-content:space-around;
-  margin: 0 3px;
+  justify-content:center;
+  align-items: center;
+  margin: 0 5px;
 }
 .iconCircle i {
   color: var(--primary-color);
-  font-size: large;
+  display: flex;
+  font-size: 2.7vmin;
 }
 .gallery {
   display:grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap:1px;
+  grid-template-columns: repeat(3, 55px);
+  grid-template-rows: repeat(4, 55px);
+  grid-gap:3px;
   justify-items: start;
 }
 .title {
  grid-column:span 3;
  justify-self: start;
+ z-index:3;
 }
 .gallery img {
-  width:50px;
-  height: 50px;
+  height: 55px;
   overflow:hidden;
 }

@@ -1,12 +1,13 @@
 import styles from "./index.module.css"
-
-
+import SectionText from "../SectionText";
+import { useTranslation } from "react-i18next";
 const ConsultationSection = () => {
+    const { t } = useTranslation();
     return (
         <div className={styles.consultation}>
              <div className={styles.textWrapper}>
-            <h1>Консулатции и резарвация</h1>
-            <p>Телефон: +359 88 888 888</p>
+             <SectionText title={t('consultationSection.title')} text={t('phone')}>
+            </SectionText>
             </div>
         </div>
     )

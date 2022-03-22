@@ -1,16 +1,18 @@
 import styles from "./index.module.css"
 import PhotosSection from "../PhotosSection"
 import Button from "../Button";
+import SectionText from "../SectionText";
+import { useTranslation } from "react-i18next";
 
-const SectionTitle = () => {
+const SectionGallery = () => {
+    const { t } = useTranslation();
     return (
-        <div className={styles.sectionTitle}>
-   
-            <h1>Шоу Програми Галерия</h1>
+        <div className={styles.gallery}>
+            <SectionText title={t('gallerySection.title')} text={t('gallerySection.text')}>
             <PhotosSection />
-            <p>Вижте още развлекателни програми</p>
-            <Button />
+            </SectionText>
+            <Button name={t('gallerySection.buttonText')} />
         </div>
     )
 }
-export default SectionTitle ;
+export default SectionGallery;
