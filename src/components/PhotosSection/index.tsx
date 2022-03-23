@@ -12,7 +12,7 @@ import 'swiper/css/effect-coverflow';
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 
-function PhotosSection() {
+const PhotosSection = () => {
   return (
     <Swiper
       effect="coverflow"

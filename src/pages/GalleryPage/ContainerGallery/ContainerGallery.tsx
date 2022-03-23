@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Modal from '../Modal/Modal';
 
 import styles from './ContainerGallery.module.css';
 
-function ContainerGallery(props: any) {
+const ContainerGallery = (props: any) => {
   const arr = [...props.allImages];
 
   const [state, setState] = useState<any>({

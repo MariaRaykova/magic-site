@@ -4,7 +4,7 @@ import styles from './App.module.css';
 export interface Props {
   children: React.ReactNode;
 }
-function App(props: Props) {
+const App = (props: Props) => {
   return (
     <div className={styles.App}>
       {props.children}

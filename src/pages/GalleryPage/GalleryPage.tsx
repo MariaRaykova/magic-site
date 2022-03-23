@@ -13,7 +13,7 @@ type type = {
   imgPath: string,
 }
 
-function GalleryPage() {
+const GalleryPage = () => {
   const [state, setState] = useState<type>({
     open: false,
     imgPath: '',

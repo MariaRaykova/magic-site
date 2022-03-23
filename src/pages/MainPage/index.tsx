@@ -3,10 +3,9 @@ import ConsultationSection from '../../components/ConsultationSection';
 import IconsSection from '../../components/IconsSection';
 import ReserveSection from '../../components/ReserveSection';
 import SectionGallery from '../../components/SectionGallery';
-import styles from './index.module.css';
 import IntroSection from '../../components/IntroSection';
 
-function MainPage() {
+const MainPage = () => {
   return (
     <div>
       <IntroSection />
