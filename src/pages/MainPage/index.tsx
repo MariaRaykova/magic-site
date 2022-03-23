@@ -1,10 +1,11 @@
-import ConsultationSection from "../../components/ConsultationSection";
-import IconsSection from "../../components/IconsSection";
-import ReserveSection from "../../components/ReserveSection";
-import SectionGallery from "../../components/SectionGallery";
-import IntroSection from "../../components/IntroSection";
+import React from 'react';
+import ConsultationSection from '../../components/ConsultationSection';
+import IconsSection from '../../components/IconsSection';
+import ReserveSection from '../../components/ReserveSection';
+import SectionGallery from '../../components/SectionGallery';
+import IntroSection from '../../components/IntroSection';
 
-const MainPage = () =>{
+const MainPage = () => {
   return (
     <div>
       <IntroSection />
@@ -12,7 +13,7 @@ const MainPage = () =>{
       <ReserveSection />
       <SectionGallery />
       <ConsultationSection />
-      </div>
+    </div>
   );
 }
 export default MainPage;

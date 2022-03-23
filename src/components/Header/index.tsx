@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./index.module.css"
-import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from "react-icons/fa"
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import styles from './index.module.css'
+import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
     const { t, i18n } = useTranslation();

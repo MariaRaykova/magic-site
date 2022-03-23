@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./index.module.css"
-import SectionText from "../SectionText";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import styles from './index.module.css'
+import SectionText from '../SectionText';
+import { useTranslation } from 'react-i18next';
 const ReserveSection = () => {
     const { t } = useTranslation();
     return (
@@ -18,4 +18,4 @@ const ReserveSection = () => {
         </div>
     )
 }
-export default ReserveSection ;
+export default ReserveSection;

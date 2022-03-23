@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./index.module.css"
+import React from 'react';
+import styles from './index.module.css'
 
 interface Props {
     name: string;
@@ -9,4 +9,4 @@ const Button = (props: Props) => {
        <button className={styles.buttonMain}>{props.name}</button>
     )
 }
-export default Button ;
+export default Button;

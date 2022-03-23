@@ -2,12 +2,14 @@ import React  from 'react';
 import styles from './App.module.css';
 
 export interface Props {
-  children: React.ReactNode; 
+  children: React.ReactNode;
 }
-const App = (props: Props) => (
+const App = (props: Props) => {
+  return (
     <div className={styles.App}>
       {props.children}
     </div>
-  )
+  );
+}
 
-export default App
+export default App;

@@ -1,6 +1,6 @@
 
-import React from "react";
-import {SwiperSlide } from "swiper/react";
+import React from 'react';
+import {SwiperSlide } from 'swiper/react';
 
 
 const SwiperItem = () => {
@@ -11,4 +11,4 @@ const SwiperItem = () => {
     )
 
 }
-export default SwiperSlide;
+export default SwiperItem;

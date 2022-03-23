@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./index.module.css"
-import SectionText from "../SectionText";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import styles from './index.module.css'
+import SectionText from '../SectionText';
+import { useTranslation } from 'react-i18next';
 const ConsultationSection = () => {
     const { t } = useTranslation();
     return (
@@ -13,4 +13,4 @@ const ConsultationSection = () => {
         </div>
     )
 }
-export default ConsultationSection ;
+export default ConsultationSection;
