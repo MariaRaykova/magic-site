@@ -11,4 +11,4 @@ const SwiperItem = () => {
     )
 
 }
-export default SwiperSlide;
+export default SwiperItem;

@@ -1,6 +1,7 @@
 import React, {
-  Fragment, MouseEventHandler, ReactChild, ReactFragment, ReactPortal,
+   MouseEventHandler, ReactChild, ReactFragment, ReactPortal,
 } from 'react';
+
 import ReactDOM from 'react-dom';
 import { AiOutlineClose } from 'react-icons/ai';
 import styles from './ModalContactCall.module.css';

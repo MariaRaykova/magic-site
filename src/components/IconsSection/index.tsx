@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./index.module.css"
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import styles from './index.module.css'
+import { useTranslation } from 'react-i18next';
 
 
 const Icons = () => {

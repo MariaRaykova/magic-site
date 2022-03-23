@@ -19,9 +19,18 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prefer-arrow"
     ],
     "rules": {
-        // "quotes": [2, "single", {"avoidEscape": true}]
+         "quotes": [2, "single", {"avoidEscape": true}],
+         "prefer-arrow/prefer-arrow-functions": [
+            "warn",
+            {
+              "disallowPrototype": true,
+              "singleReturnOnly": false,
+              "classPropertiesAllowed": false
+            }
+          ]
     }
 }

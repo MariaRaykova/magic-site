@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Layout.module.css';
 
-function Layout(props: { children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined }) {
+const Layout = (props: { children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined }) => {
   return (
     <div className={styles.container}>
       {props.children}
