@@ -1,0 +1,46 @@
+{
+    "phone": "+359 88 888 888",
+    "name": "Zoyko Milenkov",
+    "email": "email@email.com",
+    "description": "``My talent is not so much to do tricks as to inspire``",
+    "navigation": {
+        "home": "Home",
+        "gallery": "Gallery",
+        "contacts": "Contacts"
+    },
+    "iconsSection": {
+        "text1": "Various entertainment shows",
+        "text2": "Mesmerizing performances",
+        "text3": "Interactive programs with the audience",
+        "text4": "Lots of optical illusions"
+    },
+    "consultationSection": {
+        "title": "Consultations and reservation"
+    },
+    "reservationSection" : {
+        "title": "Book your show",
+        "item1": "Magic show",
+        "item2": "Private programs",
+        "item3": "Stage performance"
+    },
+    "gallerySection" : {
+        "title": "Show Programs Gallery",
+        "text": "Take a look at the other photos",
+        "buttonText": "Gallery"
+    },
+    "footer": {
+        "firstColumn": {
+            "title": "Consultations and reservation",
+            "items": {
+                "item1": "Children's parties",
+                "item2": "Public show",
+                "item3": "Stage performances",
+                "item4": "Special occasions",
+                "item5": "Seasonal engagement"
+            }
+        },
+        "secondColumn": {
+            "title": "Contacts"
+        }
+    }
+}

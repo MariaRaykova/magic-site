@@ -1,25 +1,19 @@
 @import "../../variables.css";
 
 .header {
-    /* background-color: var(--primary-color); */
-    /* min-height: 14vh; */
-    background: rgba(0, 0, 0, 0.63);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(5px + 2vmin);
     color: var(--secondary-color);
-    padding: 10px 15vmin;
-    /* position: fixed;
-    top: 0; */
+    padding: var(--main-padding);
     z-index: 10;
-
 }
 .infoLine {
     display: flex;
-    /* background: var(--primary-color); */
-    height: 5vh;
+    height: 3vh;
     width: 100%;
     justify-content: space-between;
     padding: 10px 0;
@@ -70,3 +64,24 @@ i {
     color: var(--secondary-color);
     text-decoration: none;
 }
+.buttons {
+    display:flex;
+    align-items: center;
+}
+.button{
+    color: var(--text-color);
+    font-size: 2vmin;
+    border: 1px solid var(--secondary-color);
+    border-radius: 30px;
+    background: var(--primary-color);
+    width: 5vmin;
+    height: 3vmin;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    /* line-height: 50px; */
+    text-align: center;
+    }
+    .buttonMain:hover{
+      background: var(--secondary-color);
+    }

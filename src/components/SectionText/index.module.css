@@ -1,0 +1,8 @@
+.sectionTitle {
+    font-size: 10vmin;
+    color: var(--secondary-color);
+}
+.sectionText {
+    font-size: 5vmin;
+    color: var(--text-color);
+}

@@ -1,6 +1,12 @@
-import styles from './index.module.css';
+import React from "react";
+import styles from "./index.module.css"
 
-function Button() {
-  return <button className={styles.buttonMain}>Галерия</button>;
+interface Props {
+    name: string;
+}
+const Button = (props: Props) => {
+    return (
+       <button className={styles.buttonMain}>{props.name}</button>
+    )
 }
 export default Button;

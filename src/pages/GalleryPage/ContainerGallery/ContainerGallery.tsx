@@ -39,17 +39,15 @@ function ContainerGallery(props: any) {
 
   const slidePresentationTime = 50; // after how many ms slide will change - now 3s / 3000ms
   const [currentSlide, setCurrentSlide] = useState(0); // value and function to set currrent slide index
-  let sliderInterval = useRef(); // interval ref
+  let sliderInterval: any;
 
   useEffect(() => {
-    // @ts-ignore
     sliderInterval = setInterval(() => {
       setCurrentSlide((state.num)); // change current slide to next slide after 'slidePresentationTime'
     }, slidePresentationTime);
 
     // cleanup interval when your component will unmount
     return () => {
-      // @ts-ignore
       clearInterval(sliderInterval);
     };
   });

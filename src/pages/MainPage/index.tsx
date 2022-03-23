@@ -10,20 +10,6 @@ function MainPage() {
   return (
     <div>
       <IntroSection />
-      <div className={styles.main}>
-        <p className={styles.imageWrapper}>
-          <div className={styles.imageWrapper}>
-            <div className={styles.headerWrapper}>
-              <h1>Зойко Миленков</h1>
-              <p>`&quot;`Моят талант е не толкова да правя фокуси, колкото да вдъхновявам`&quot;` </p>
-            </div>
-            <img src="/images/image1.png" />
-          </div>
-          <p className={styles.animation}>
-            <video className={styles.video} src="/images/smoke.mp4" autoPlay muted loop />
-          </p>
-        </p>
-      </div>
       <IconsSection />
       <ReserveSection />
       <SectionGallery />
@@ -31,5 +17,4 @@ function MainPage() {
     </div>
   );
 }
-
 export default MainPage;

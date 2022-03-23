@@ -7,19 +7,17 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-function Router() {
-  return (
-    <>
-      <Header />
-      <Navigation />
-      <Routes>
-        <Route exact path="/" element={<MainPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/contacts" element={<Contacts />} />
-      </Routes>
-      <Footer />
-    </>
-  );
+const Router = () => {
+  return <>
+    <Header />
+    <Navigation />
+    <Routes>
+      <Route exact path="/" element={<MainPage />} />
+      <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/contacts" element={<Contacts />} />
+    </Routes>
+    <Footer />
+  </>
 }
 
 export default Router;

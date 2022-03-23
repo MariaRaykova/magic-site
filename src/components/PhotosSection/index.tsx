@@ -1,3 +1,4 @@
+import React from 'react'
 import SwiperCore, {
   Navigation, Pagination, EffectCoverflow, Autoplay,
 } from 'swiper';
