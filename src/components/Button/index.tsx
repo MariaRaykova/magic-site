@@ -1,8 +1,6 @@
-import styles from "./index.module.css"
+import styles from './index.module.css';
 
-const Button = () => {
-    return (
-       <button className={styles.buttonMain}>Галерия</button>
-    )
+function Button() {
+  return <button className={styles.buttonMain}>Галерия</button>;
 }
-export default Button ;
+export default Button;
