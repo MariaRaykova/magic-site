@@ -12,6 +12,7 @@ type type = {
   open: boolean,
   imgPath: string,
 }
+type imageType = string;
 
 const GalleryPage = () => {
   const [state, setState] = useState<type>({
@@ -24,7 +25,7 @@ const GalleryPage = () => {
     assets.keys().map(assets)
 
   const images = importAll(require.context('../../Assets', false, /\.(png|jpe?g|svg)$/))
-
+ 
   const handleOpen = (imgLink: string) => {
     setState((prevState) => ({ ...prevState, open: true, imgPath: imgLink }))
   }

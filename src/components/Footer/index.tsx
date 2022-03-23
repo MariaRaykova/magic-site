@@ -30,32 +30,6 @@ const Footer = () => {
           <span style={{ color: 'var(--secondary-color)', fontSize: '1.5rem', marginRight: '5px' }}> <FaFacebook /> <FaInstagramSquare /> </span>
         </div>
       </div>
-      {/* <div className={styles.gallery}>
-                <h1 className={styles.title}>Галерия</h1>
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-                    <img src="/images/image0.jpeg" />
-            </div> */}
-      <div className={styles.gallery}>
-        <h1 className={styles.title}>Галерия</h1>
-
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-        <img src="/images/image0.jpeg" />
-
-      </div>
       {/* <a target="_blank" href="https://icons8.com/icon/6wPGrsF25bmU/magic">Magic icon by Icons8</a> */}
     </div >
   )

@@ -37,18 +37,3 @@
     text-align: center;
     
   }
-  .textWrapper h1 {
-    font-size: 10vmin;
-    padding-bottom:10px;
-  }
-  .textWrapper p {
-    font-size: 5vmin;
-  }
-  /* .textWrapper .section {
-    font-size: 5vmin;
-  }
-  .textWrapper .section span i {
-    background-color: var(--secondary-color);
-    font-size: 3vmin;
-  } */
-  
