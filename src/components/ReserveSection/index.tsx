@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./index.module.css"
 import SectionText from "../SectionText";
 import { useTranslation } from "react-i18next";

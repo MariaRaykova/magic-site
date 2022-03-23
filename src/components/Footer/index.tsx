@@ -1,4 +1,5 @@
 
+import React from "react";
 import styles from "./index.module.css"
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import { useTranslation } from "react-i18next";

@@ -1,16 +1,13 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import styles from "./index.module.css"
-import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagramSquare } from "react-icons/fa"
-import { Link } from "react-router-dom";
+import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from "react-icons/fa"
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
     const { t, i18n } = useTranslation();
-
     const changeLanguage = (lng:string):void => {
       i18n.changeLanguage(lng);
     };
-  
     return (
         <div className={styles.header}>
             <div className={styles.infoLine}>

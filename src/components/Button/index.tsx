@@ -1,5 +1,4 @@
-import { StringifyOptions } from "querystring";
-import { StringLiteralLike } from "typescript";
+import React from "react";
 import styles from "./index.module.css"
 
 interface Props {

@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./index.module.css";
 
 interface Props {
@@ -5,7 +6,7 @@ interface Props {
     title: string;
     text:string;
 }
-const SectionFrame= (props:Props) => {
+const SectionText= (props:Props) => {
     return (
         <div>
             <h1 className={styles.sectionTitle}>{props.title}</h1>
@@ -14,4 +15,4 @@ const SectionFrame= (props:Props) => {
         </div>
     )
 }
-export default SectionFrame ;
+export default SectionText;
