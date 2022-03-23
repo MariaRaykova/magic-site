@@ -25,8 +25,6 @@ const Icons = () => {
         </span>
     </div>
 
- 
-
-    )
+  );
 }
 export default Icons;

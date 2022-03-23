@@ -19,7 +19,7 @@ const IntroSection = () => {
             </div>
         </div>
 
-    );
+  );
 }
 
 export default IntroSection;

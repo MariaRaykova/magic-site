@@ -18,4 +18,4 @@ const ReserveSection = () => {
         </div>
     )
 }
-export default ReserveSection ;
+export default ReserveSection;

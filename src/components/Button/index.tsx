@@ -9,4 +9,4 @@ const Button = (props: Props) => {
        <button className={styles.buttonMain}>{props.name}</button>
     )
 }
-export default Button ;
+export default Button;

@@ -1,68 +1,62 @@
-
-
 import React, { useState } from 'react'
 
-import styles from "./GalleryPage.module.css"
+import styles from './GalleryPage.module.css'
 
 import ContainerGallery from './ContainerGallery/ContainerGallery'
 
 import Layout from '../Layout/Layout'
 
-const GalleryPage = () => {
 
-    type type = {
-        open: Boolean,
-        imgPath: string,
-    }
 
-    const [state, setState] = useState<type>({
-        open: false,
-        imgPath: '',
-    })
+type type = {
+  open: boolean,
+  imgPath: string,
+}
 
-    function importAll(r: { keys: () => any[] }) {
-        // @ts-ignore
-        return r.keys().map(r)
-    }
+function GalleryPage() {
+  const [state, setState] = useState<type>({
+    open: false,
+    imgPath: '',
+  })
 
-    const images = importAll(require.context('../../Assets', false, /\.(png|jpe?g|svg)$/))
+  const importAll = (assets: __WebpackModuleApi.RequireContext) =>
 
-    const handleOpen = (imgLink: string) => {
-        setState((prevState) => {
-            return { ...prevState, open: true }
-        })
-        setState((prevState) => {
-            return { ...prevState, imgPath: imgLink }
-        })
-    }
+    assets.keys().map(assets)
 
-    const handleClose = () => {
-        setState((prevState) => {
-            return { ...prevState, open: false }
-        })
-    }
-    return <Layout>
-        <div className={styles.reserve}>
-            <h1 className={styles.textWrapper}>Галерия</h1>
-        </div>
+  const images = importAll(require.context('../../Assets', false, /\.(png|jpe?g|svg)$/))
 
-        {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={images} handleClose={handleClose} />}
+  const handleOpen = (imgLink: string) => {
+    setState((prevState) => ({ ...prevState, open: true, imgPath: imgLink }))
+  }
 
-        <div className={`${styles.container} `}>
-            {
-                images.map((image, index) => (
-                    // @ts-ignore
-                    <img className={index % 2 === 0 ? `${styles.tall}` : `${styles.wide}`} key={image}
-                        // @ts-ignore
-                        onClick={() => handleOpen(image)}
-                        // @ts-ignore
-                        src={image} alt=''
-                    />
-                ))
-            }
-        </div>
-        <div className={styles.reserve}></div>
+  const handleClose = () => {
+    setState((prevState) => ({ ...prevState, open: false }))
+  }
+
+  return (
+    <Layout>
+      <div className={styles.reserve}>
+        <h1 className={styles.textWrapper}>Галерия</h1>
+      </div>
+
+      {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={images} handleClose={handleClose} />}
+
+      <div className={`${styles.container} `}>
+        {
+          images.map((image: any, index: number) => (
+            <img
+              className={index % 2 === 0 ? `${styles.tall}` : `${styles.wide}`}
+              key={image}
+              onClick={() => handleOpen(image)}
+              src={image}
+              alt=""
+            />
+          ))
+        }
+      </div>
+      <div className={styles.reserve} />
     </Layout>
+  )
 }
 
 export default GalleryPage
