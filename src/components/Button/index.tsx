@@ -3,10 +3,11 @@ import styles from './index.module.css'
 
 interface Props {
     name: string;
+    handleClick: React.MouseEventHandler<HTMLButtonElement>;
 }
-const Button = (props: Props) => {
+const Button = ({name, handleClick}: Props) => {
     return (
-       <button className={styles.buttonMain}>{props.name}</button>
+       <button onClick={handleClick} className={styles.buttonMain}>{name}</button>
     )
 }
 export default Button;

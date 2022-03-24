@@ -42,5 +42,8 @@
         "secondColumn": {
             "title": "Contacts"
         }
+    },
+    "notFound": {
+        "title": "Page not found"
     }
 }
