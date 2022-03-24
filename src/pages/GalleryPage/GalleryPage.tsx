@@ -19,9 +19,7 @@ const GalleryPage = () => {
     imgPath: '',
   })
 
-  const importAll = (assets: __WebpackModuleApi.RequireContext) =>
-
-    assets.keys().map(assets)
+  const importAll = (assets: __WebpackModuleApi.RequireContext) => assets.keys().map(assets)
 
   const images = importAll(require.context('../../Assets', false, /\.(png|jpe?g|svg)$/))
 
