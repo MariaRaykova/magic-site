@@ -6,7 +6,7 @@ import ContainerGallery from './ContainerGallery/ContainerGallery'
 
 import Layout from '../Layout/Layout'
 
-
+import { useTranslation } from 'react-i18next';
 
 type type = {
   open: boolean,
@@ -15,6 +15,7 @@ type type = {
 type imageType = string;
 
 const GalleryPage = () => {
+  const { t } = useTranslation();
   const [state, setState] = useState<type>({
     open: false,
     imgPath: '',
@@ -35,7 +36,7 @@ const GalleryPage = () => {
   return (
     <Layout>
       <div className={styles.reserve}>
-        <h1 className={styles.textWrapper}>Галерия</h1>
+        <h1 className={styles.textWrapper}>{t('gallery.title')}</h1>
       </div>
 
       {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={images} handleClose={handleClose} />}

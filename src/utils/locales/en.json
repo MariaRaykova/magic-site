@@ -45,5 +45,19 @@
     },
     "notFound": {
         "title": "Page not found"
+    },
+    "gallery": {
+        "title": "Gallery"
+    },
+    "contacts": {
+        "title": "Contact us",
+        "text": "CONTACTS",
+        "call": "Request a call",
+        "yourName" : "Your Name",
+        "yourPhone" : "Your Phone",
+        "yourEmail" : "Your Email",
+        "yourMessage" : "Your Message",
+        "send" : "Send",
+        "request" : "Request a show"
     }
 }

@@ -10,7 +10,11 @@ import styles from './Contacts.module.css'
 
 import ContainerContactCall from '../GalleryPage/ContainerGallery/ContainerContactCall'
 
+import { useTranslation } from 'react-i18next';
+
 const Contacts = () => {
+  const { t } = useTranslation();
+
   type type = {
     open: boolean,
   }
@@ -30,20 +34,20 @@ const Contacts = () => {
   const handleClose: any = () => {
     setState((prevState) => ({ ...prevState, open: false }))
   }
-
+  
   return (
     <Layout>
 
       {state.open && <ContainerContactCall handleClose={handleClose} />}
 
       <div className={styles.reserve}>
-        <h1 className={styles.textWrapper}>Свържете се с мен</h1>
+        <h1 className={styles.textWrapper}>{t('contacts.title')}</h1>
       </div>
 
       <div className={styles.mainContainer}>
 
         <div className={styles.call}>
-          <span className={styles.textContact}> КОНТАКТИ </span>
+          <span className={styles.textContact}>{t('contacts.text')}</span>
           <p />
           <span className={styles.textCall}>
             <FaPhoneAlt style={{ color: 'var(--secondary-color)', fontSize: '1rem', marginRight: '5px' }} />
@@ -56,7 +60,7 @@ const Contacts = () => {
           <span className={styles.textCall}>
             <FaEnvelope style={{ color: 'var(--secondary-color)', fontSize: '1rem', marginRight: '5px' }} />
             {' '}
-            zojko@childish.eu
+            {t('email')}
             {' '}
           </span>
           <p />
@@ -67,7 +71,7 @@ const Contacts = () => {
             <FaInstagramSquare />
             {' '}
           </span>
-          <button className={styles.buttonCall} onClick={handleOpen}>Заявете обаждане</button>
+          <button className={styles.buttonCall} onClick={handleOpen}>{t('contacts.call')}</button>
         </div>
 
         <div className={styles.containerIn}>
@@ -77,7 +81,7 @@ const Contacts = () => {
               <input
                 type="text"
                 id="user"
-                placeholder="Вашето име"
+                placeholder={t('contacts.yourName')}
                 name="Test"
                 // value={''}
                 onChange={handleChange}
@@ -98,7 +102,7 @@ const Contacts = () => {
                   type="text"
                   id="phone"
                   style={{ width: '98%', marginRight: '5px' }}
-                  placeholder="Вашият телефон"
+                  placeholder={t('contacts.yourPhone')}
                   name="Test"
                   // value={''}
                   onChange={handleChange}
@@ -117,7 +121,7 @@ const Contacts = () => {
                   type="text"
                   id="email"
                   style={{ maxWidth: '98%', marginLeft: '5px' }}
-                  placeholder="Вашият и-мейл"
+                  placeholder={t('contacts.yourEmail')}
                   name="Test"
                   // value={''}
                   onChange={handleChange}
@@ -136,7 +140,7 @@ const Contacts = () => {
             <div className={styles.inputWrapper}>
               <textarea
                 id="text"
-                placeholder="Вашето съобщение"
+                placeholder={t('contacts.yourMessage')}
                 name="Test"
                 rows={8}
                 // value={''}
@@ -151,13 +155,13 @@ const Contacts = () => {
               />
             </div>
 
-            <button className={styles.buttonSend}>Изпращане</button>
+            <button className={styles.buttonSend}>{t('contacts.send')}</button>
           </div>
         </div>
       </div>
       <div className={styles.reserve}>
         <h1 className={styles.textWrapper}>
-          <div>Заявка за шоу</div>
+          <div>{t('contacts.request')}</div>
           +359 888888888
         </h1>
       </div>
