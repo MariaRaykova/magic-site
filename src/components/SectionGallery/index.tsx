@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './index.module.css';
+import { useTranslation } from 'react-i18next';
 import PhotosSection from '../PhotosSection';
 import Button from '../Button';
 import SectionText from '../SectionText';
-import { useTranslation } from 'react-i18next';
+import styles from './index.module.css';
 
-const SectionGallery = () => {
+const SectionGallery: FC = () => {
     const navigate = useNavigate();
     const clickHandler = (): void => {
         navigate('/gallery');
@@ -14,10 +14,16 @@ const SectionGallery = () => {
     const { t } = useTranslation();
     return (
         <div className={styles.gallery}>
-            <SectionText title={t('gallerySection.title')} text={t('gallerySection.text')}>
+            <SectionText
+                title={t('gallerySection.title')}
+                text={t('gallerySection.text')}
+            >
                 <PhotosSection />
             </SectionText>
-            <Button name={t('gallerySection.buttonText')} handleClick={clickHandler}/>
+            <Button
+                name={t('gallerySection.buttonText')}
+                onClick={clickHandler}
+            />
         </div>
     )
 }

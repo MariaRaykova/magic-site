@@ -13,10 +13,10 @@
 .reserve::before {
   content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.63);
 }
 .reserve::after {

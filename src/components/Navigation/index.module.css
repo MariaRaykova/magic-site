@@ -1,5 +1,5 @@
 .navigation {
-    position:sticky;
+    position: sticky;
     top: 0;
     padding: var(--main-padding);
     width: 100%;
@@ -7,11 +7,11 @@
     align-items: center;
     justify-content: flex-start;
     box-shadow: inset -1px 7px 5px -3px rgb(28, 28, 94);
-    font-size:4vmin;
+    font-size: 4vmin;
     background-color: var(--primary-color);
     z-index: 12;
 }
-.navigation a{
+.navigation a {
     margin-right: 30px;
     color: var(--text-color);
     text-decoration: none;

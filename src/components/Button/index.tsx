@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { FC, HtmlHTMLAttributes } from 'react';
 import styles from './index.module.css'
 
-interface Props {
+interface Props extends HtmlHTMLAttributes<HTMLButtonElement> {
     name: string;
-    handleClick: React.MouseEventHandler<HTMLButtonElement>;
+    onClick: (event: React.MouseEvent) => void;
 }
-const Button = ({name, handleClick}: Props) => {
-    return (
-       <button onClick={handleClick} className={styles.buttonMain}>{name}</button>
-    )
-}
+const Button: FC<Props> = ({ name, ...restProps }) => (
+    <button
+        {...restProps}
+        className={styles.buttonMain}
+    >
+        {name}
+    </button>
+)
 export default Button;

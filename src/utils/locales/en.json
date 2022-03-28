@@ -17,13 +17,13 @@
     "consultationSection": {
         "title": "Consultations and reservation"
     },
-    "reservationSection" : {
+    "reservationSection": {
         "title": "Book your show",
         "item1": "Magic show",
         "item2": "Private programs",
         "item3": "Stage performance"
     },
-    "gallerySection" : {
+    "gallerySection": {
         "title": "Show Programs Gallery",
         "text": "Take a look at the other photos",
         "buttonText": "Gallery"
@@ -53,11 +53,11 @@
         "title": "Contact us",
         "text": "CONTACTS",
         "call": "Request a call",
-        "yourName" : "Your Name",
-        "yourPhone" : "Your Phone",
-        "yourEmail" : "Your Email",
-        "yourMessage" : "Your Message",
-        "send" : "Send",
-        "request" : "Request a show"
+        "yourName": "Your Name",
+        "yourPhone": "Your Phone",
+        "yourEmail": "Your Email",
+        "yourMessage": "Your Message",
+        "send": "Send",
+        "request": "Request a show"
     }
 }

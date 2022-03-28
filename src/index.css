@@ -2,19 +2,10 @@
 
 body {
   margin: 0;
-  font-family: PerspectiveC;
+  font-family: PerspectiveC, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-/* @font-face {
-  font-family: ComforterRegular;
-  src: url('/public/font/Comforter-Regular.ttf');
-} */
 @font-face {
   font-family: PerspectiveC;
   src: url('/public/font/PerspectiveC.otf');

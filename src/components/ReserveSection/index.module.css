@@ -10,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: PerspectiveC;
   text-align: center;
   padding: var(--main-padding);
 }
@@ -19,7 +18,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  left:0px;
+  left: 0px;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.63);
 }
@@ -36,27 +35,25 @@
   content: "";
 }
 .textWrapper {
-  position:relative;
-  font-family: PerspectiveC;
+  position: relative;
   text-align: center;
 }
-
 .items {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   list-style: none;
   text-align: start;
   padding-left: 0;
   color: var(--text-color);
-  font-size: var(--text-font-size)
+  font-size: var(--text-font-size);
 }
-.check{
-  padding-right:20px;
+.check {
+  padding-right: 20px;
 }
 .check::before {
   content: "\2714";
   padding-right: 3px;
   color: var(--secondary-color);
-  width:30px;
+  width: 30px;
   height: 30px;
 }

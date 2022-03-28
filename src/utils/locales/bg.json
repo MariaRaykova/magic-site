@@ -17,13 +17,13 @@
     "consultationSection": {
         "title": "Консулатции и резарвация"
     },
-    "reservationSection" : {
+    "reservationSection": {
         "title": "Резервирайте Вашето Шоу",
         "item1": "Магическо шоу",
         "item2": "Частни програми",
         "item3": "Сценични участия"
     },
-    "gallerySection" : {
+    "gallerySection": {
         "title": "Шоу Програми Галерия",
         "text": "Вижте още развлекателни програми",
         "buttonText": "Галерия"
@@ -49,17 +49,16 @@
     },
     "gallery": {
         "title": "Галерия"
-    },   
+    },
     "contacts": {
         "title": "Свържете се с мен",
         "text": "КОНТАКТИ",
         "call": "Заявете обаждане",
-        "yourName" : "Вашето име",
-        "yourPhone" : "Вашия телефон",
-        "yourEmail" : "Вашия емейл",
-        "yourMessage" : "Вашето съобщение",
-        "send" : "Изпрати",
-        "request" : "Завка за шоу"
-
+        "yourName": "Вашето име",
+        "yourPhone": "Вашия телефон",
+        "yourEmail": "Вашия емейл",
+        "yourMessage": "Вашето съобщение",
+        "send": "Изпрати",
+        "request": "Завка за шоу"
     }
 }
