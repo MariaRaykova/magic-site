@@ -50,7 +50,7 @@ const ContainerGallery = (props: any) => {
     return () => {
       clearInterval(sliderInterval);
     };
-  });
+  }, [state.num]);
 
   return (
     <Modal handleClose={props.handleClose}>

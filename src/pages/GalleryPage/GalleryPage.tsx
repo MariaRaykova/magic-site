@@ -1,30 +1,28 @@
 import React, { useState } from 'react'
 
-import styles from './GalleryPage.module.css'
-
 import ContainerGallery from './ContainerGallery/ContainerGallery'
-
 import Layout from '../Layout/Layout'
+import { arrImg } from './Import_Images'
 
-import { useTranslation } from 'react-i18next';
+import styles from './GalleryPage.module.css'
+import { useTranslation } from 'react-i18next'
 
 type type = {
   open: boolean,
   imgPath: string,
 }
-type imageType = string;
 
 const GalleryPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [state, setState] = useState<type>({
     open: false,
     imgPath: '',
   })
 
-  const importAll = (assets: __WebpackModuleApi.RequireContext) => assets.keys().map(assets)
+  // @Taking images from pointed directory 
+  // const importAll = (assets: __WebpackModuleApi.RequireContext) => assets.keys().map(assets)
+  // const images = importAll(require.context('../../assets', false, /\.(png|jpe?g|svg)$/))
 
-  const images = importAll(require.context('../../Assets', false, /\.(png|jpe?g|svg)$/))
- 
   const handleOpen = (imgLink: string) => {
     setState((prevState) => ({ ...prevState, open: true, imgPath: imgLink }))
   }
@@ -39,17 +37,17 @@ const GalleryPage = () => {
         <h1 className={styles.textWrapper}>{t('gallery.title')}</h1>
       </div>
 
-      {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={images} handleClose={handleClose} />}
+      {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={arrImg} handleClose={handleClose} />}
 
       <div className={`${styles.container} `}>
         {
-          images.map((image: any, index: number) => (
+          arrImg.map((image: unknown, index: number) => (
             <img
               className={index % 2 === 0 ? `${styles.tall}` : `${styles.wide}`}
-              key={image}
-              onClick={() => handleOpen(image)}
-              src={image}
-              alt=""
+              key={image as string}
+              onClick={() => handleOpen(image as string)}
+              src={image as string}
+              alt={image as string}
             />
           ))
         }
