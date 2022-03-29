@@ -1,28 +1,50 @@
-import React from 'react';
-import styles from './index.module.css'
+import React, { FC, useMemo } from 'react';
 import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next';
+import styles from './index.module.css'
 
-const Header = () => {
+
+const Header: FC = () => {
     const { t, i18n } = useTranslation();
-    const changeLanguage = (lng:string):void => {
-      i18n.changeLanguage(lng);
+    const changeLanguage = (lng: string) => {
+        i18n.changeLanguage(lng);
     };
+    const languages = useMemo(() => [{
+        id: 1,
+        language: 'bg',
+    }, {
+        id: 2,
+        language: 'en',
+    }, {
+        id: 3,
+        language: 'rus',
+    }], [t])
+
     return (
         <div className={styles.header}>
             <div className={styles.infoLine}>
                 <div className={styles.leftIcons}>
-                    <span style={{ color: 'var(--secondary-color)', fontSize: '1.5rem', marginRight: '5px' }}> <FaFacebook /> <FaInstagramSquare /> </span>
+                    <span className={styles.span} >
+                        <FaFacebook />
+                        <FaInstagramSquare />
+                    </span>
                 </div>
                 <div className={styles.rightIcons}>
-                    <span className={styles.textCall}><FaPhoneAlt style={{ color: 'var(--secondary-color)', fontSize: '1rem', marginRight: '5px' }} />
-                    {t('phone')}
+                    <span className={styles.textCall}>
+                        <FaPhoneAlt className={styles.span} />
+                        {t('phone')}
                     </span>
                 </div>
                 <div className={styles.buttons}>
-                <button className={styles.button} onClick={() => changeLanguage('bg')}>bg</button>
-                <button className={styles.button} onClick={() => changeLanguage('en')}>en</button>
-                <button className={styles.button} onClick={() => changeLanguage('rus')}>rus</button>
+                    {languages.map(language => (
+                        <button
+                            key="language.id"
+                            className={styles.button}
+                            onClick={() => changeLanguage(`${language.language}`)}
+                        >
+                            {language.language}
+                        </button>
+                    ))}
                 </div>
             </div>
         </div>

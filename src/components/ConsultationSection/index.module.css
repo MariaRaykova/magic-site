@@ -1,39 +1,36 @@
 .consultation {
-    position: relative;
-    background-image: url(/public/images/fokusnik.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .consultation::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    left:0px;
-    bottom: 0px;
-    background: rgba(0, 0, 0, 0.50);
-  }
-  .consultation::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background: url(/public/images/symbol-scatter-haikei.svg) bottom no-repeat fixed ;
-    content: "";
-  }
-  .textWrapper {
-    position:relative;
-    font-family: PerspectiveC;
-    color: var(--text-color);
-    text-align: center;
-    
-  }
+  position: relative;
+  background-image: url(/public/images/fokusnik.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.consultation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.consultation::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background: url(/public/images/symbol-scatter-haikei.svg) bottom no-repeat fixed;
+}
+.textWrapper {
+  position: relative;
+  color: var(--text-color);
+  text-align: center;
+}

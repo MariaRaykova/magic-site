@@ -3,9 +3,8 @@
   grid-template-columns: repeat(3, 30%);
   grid-column-gap: 5vmin;
   padding: var(--main-padding);
-  font-family: PerspectiveC;
   font-size: 3vmin;
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 .title {
   font-size: 5vmin;
@@ -15,17 +14,18 @@
   list-style: none;
   text-align: start;
   padding-left: 0;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 .arrow::before {
   content: "\27A2";
   padding-right: 10px;
   color: var(--secondary-color);
   font-weight: bold;
-  width:30px;
+  width: 30px;
   height: 30px;
 }
-.contacts, .follow {
+.contacts,
+.follow {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -61,7 +61,7 @@
   width: 4vmin;
   height: 4vmin;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   margin: 0 5px;
 }
@@ -71,18 +71,23 @@
   font-size: 2.7vmin;
 }
 .gallery {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 55px);
   grid-template-rows: repeat(4, 55px);
-  grid-gap:3px;
+  grid-gap: 3px;
   justify-items: start;
 }
 .title {
- grid-column:span 3;
- justify-self: start;
- z-index:3;
+  grid-column: span 3;
+  justify-self: start;
+  z-index: 3;
 }
 .gallery img {
   height: 55px;
-  overflow:hidden;
+  overflow: hidden;
+}
+.span {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-right: 5px;
 }
