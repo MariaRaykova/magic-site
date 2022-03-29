@@ -32,7 +32,7 @@ const GalleryPage = () => {
   }
 
   return (
-    <Layout>
+    <>
       <div className={styles.reserve}>
         <h1 className={styles.textWrapper}>{t('gallery.title')}</h1>
       </div>
@@ -53,7 +53,7 @@ const GalleryPage = () => {
         }
       </div>
       <div className={styles.reserve} />
-    </Layout>
+    </>
   )
 }
 

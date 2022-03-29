@@ -36,8 +36,7 @@ const Contacts = () => {
   }
   
   return (
-    <Layout>
-
+    <>
       {state.open && <ContainerContactCall handleClose={handleClose} />}
 
       <div className={styles.reserve}>
@@ -171,7 +170,7 @@ const Contacts = () => {
         <p />
         <h2 className={styles.textWrapper}> </h2>
       </div>
-    </Layout>
+    </>
   )
 }
 
