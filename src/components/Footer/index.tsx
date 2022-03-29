@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react'
+import React, { FC, useMemo } from 'react'
 import styles from './index.module.css'
 import { FaFacebook, FaInstagramSquare } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 
-const Footer = () => {
+const Footer: FC = () => {
   const { t } = useTranslation()
   const items = useMemo(() => (
     Array.from({ length: 5 }).map((_, index) => ({

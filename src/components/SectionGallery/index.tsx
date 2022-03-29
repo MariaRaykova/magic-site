@@ -8,10 +8,12 @@ import styles from './index.module.css';
 
 const SectionGallery: FC = () => {
     const navigate = useNavigate();
+    const { t } = useTranslation();
+    
     const clickHandler = (): void => {
         navigate('/gallery');
     }
-    const { t } = useTranslation();
+
     return (
         <div className={styles.gallery}>
             <SectionText
