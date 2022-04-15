@@ -39,8 +39,13 @@ const Footer: FC = () => {
         <p className={styles.text}>{t('description')}</p>
         <div className={styles.icons}>
           <span className={styles.span}>
-            <FaFacebook />
-            <FaInstagramSquare />
+            <a href="https://www.facebook.com/Zoyko.Magic" target="_blank" rel="noreferrer noopener">
+              <FaFacebook color='rgb(238, 209, 137)' />
+            </a>
+            {' '}
+            <a href="https://www.instagram.com/zoyche.to" target="_blank" rel="noreferrer noopener">
+              <FaInstagramSquare color='rgb(238, 209, 137)' />
+            </a>
           </span>
         </div>
       </div>

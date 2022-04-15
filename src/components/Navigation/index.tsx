@@ -10,6 +10,7 @@ const Navigation: FC = () => {
             <NavLink className={(navData) => navData.isActive ? `${styles.active}` : ''} to="/" >{t('navigation.home')} </NavLink>
             <NavLink className={(navData) => navData.isActive ? styles.active : ''} to="/gallery" >{t('navigation.gallery')} </NavLink>
             <NavLink className={(navData) => navData.isActive ? styles.active : ''} to="/contacts" >{t('navigation.contacts')}</NavLink>
+            <NavLink className={(navData) => navData.isActive ? styles.active : ''} to="/about" >{t('navigation.about')}</NavLink>
         </div>
     )
 }

@@ -1,0 +1,185 @@
+
+.text {
+  margin: 5rem 0 0 0 ;
+  font-size: 1.7rem;
+  color: var(--secondary-color);
+  width: 60rem;
+}
+.textAdd {
+  font-size: 3.5rem;
+  margin: 3rem 0 10rem 0;
+  color: rgb(207, 195, 163);;
+}
+.textPosition {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.reserve {
+  position: relative;
+  background-image: url(/public/images/fokusnik.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reserve::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.63);
+}
+.reserve::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+.textWrapper {
+  position: relative;
+  font-family: PerspectiveC;
+  font-size: 7vmin;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.call {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 50px;
+  padding: 4rem;
+  border: 1px solid var(--contact-color);
+  border-radius: 5px;
+  margin: 10px;
+  margin-right: 53px;
+}
+
+.containerIn {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.textCall {
+  color: rgb(121, 120, 120);
+  font-size: 2vmin;
+}
+.textContact {
+  color: var(--secondary-color);
+  font-size: 3vmin;
+  font-family: PerspectiveC;
+}
+
+.buttonCall {
+  color: white;
+  background-color:rgb(32, 0, 61);
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);
+  font-family: PerspectiveC;
+  font-size: 1.2rem;
+  padding: 15px;
+  margin-top: 2rem;
+}
+
+.buttonCall:hover {
+  background-color: var(--contact-color);
+  transition: 0.5s;
+}
+.buttonCall:active {
+  position: relative;
+  top: 1px;
+}
+
+.buttonSend {
+  color: white;
+  background-color:var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 25%);
+  font-family: PerspectiveC;
+  font-size: 1.4rem;
+  padding: 15px;
+  width: 15rem;
+}
+.buttonSend:hover {
+  background-color: var(--contact-color);
+  transition: 0.5s;
+}
+.buttonSend:active {
+  position: relative;
+  top: 1px;
+}
+
+.title {
+  color: var(--secondary-color);
+  padding: 20px;
+  font-family: PerspectiveC;
+}
+textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--contact-color);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  color: var(--secondary-color);
+  font-family: PerspectiveC;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+textarea:focus {
+  /* border: 1px solid var(--highlight-secondary-color); */
+  box-shadow: 0 0 10px var(--highlight-gallery-color);
+}
+
+input {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--contact-color);
+  border-color: var(--contact-color);
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  color: var(--secondary-color);
+  font-family: PerspectiveC;
+  font-size: 20px;
+  padding-left: 50px;
+  /* border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden; */
+}
+
+input:focus {
+  /* border: 1px solid var(--highlight-secondary-color); */
+  box-shadow: 0 0 10px var(--highlight-gallery-color);
+}
+
+.inputWrapper {
+  width: 100%;
+  position: relative;
+}

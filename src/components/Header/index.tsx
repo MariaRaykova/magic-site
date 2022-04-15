@@ -1,32 +1,39 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC, useMemo } from 'react'
+import { Link } from 'react-router-dom'
+
 import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from 'react-icons/fa'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 import styles from './index.module.css'
 
 
 const Header: FC = () => {
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation()
     const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
-    };
+        i18n.changeLanguage(lng)
+    }
     const languages = useMemo(() => [{
         id: 1,
         language: 'bg',
     }, {
         id: 2,
         language: 'en',
-    }, {
-        id: 3,
-        language: 'rus',
-    }], [t])
+    },
+    ], [t])
 
     return (
         <div className={styles.header}>
             <div className={styles.infoLine}>
                 <div className={styles.leftIcons}>
-                    <span className={styles.span} >
-                        <FaFacebook />
-                        <FaInstagramSquare />
+                    <span className={styles.social} >
+                        {/* <FaFacebook onClick={() => window.open('https://google.com.ar')} /> */}
+                        <a href="https://www.facebook.com/Zoyko.Magic" target="_blank" rel="noreferrer noopener">
+                            <FaFacebook color='rgb(238, 209, 137)'/>
+                        </a>
+                    </span>
+                    <span>
+                    <a href="https://www.instagram.com/zoyche.to" target="_blank" rel="noreferrer noopener">
+                            <FaInstagramSquare color='rgb(238, 209, 137)'/>
+                        </a>
                     </span>
                 </div>
                 <div className={styles.rightIcons}>

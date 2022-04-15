@@ -10,10 +10,10 @@ import styles from './Contacts.module.css'
 
 import ContainerContactCall from '../GalleryPage/ContainerGallery/ContainerContactCall'
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
 const Contacts = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   type type = {
     open: boolean,
@@ -34,7 +34,7 @@ const Contacts = () => {
   const handleClose: any = () => {
     setState((prevState) => ({ ...prevState, open: false }))
   }
-  
+
   return (
     <>
       {state.open && <ContainerContactCall handleClose={handleClose} />}
@@ -52,9 +52,9 @@ const Contacts = () => {
             <FaPhoneAlt style={{ color: 'var(--secondary-color)', fontSize: '1rem', marginRight: '5px' }} />
             +359
             {' '}
-            <span style={{ color: 'rgb(98 87 48)' }}>(888)</span>
+            <span style={{ color: 'rgb(98 87 48)' }}>(877)</span>
             {' '}
-            888888
+            265897
           </span>
           <span className={styles.textCall}>
             <FaEnvelope style={{ color: 'var(--secondary-color)', fontSize: '1rem', marginRight: '5px' }} />
@@ -65,9 +65,13 @@ const Contacts = () => {
           <p />
           <span style={{ color: 'var(--secondary-color)', fontSize: '1.5rem', marginRight: '5px' }}>
             {' '}
-            <FaFacebook />
+            <a href="https://www.facebook.com/Zoyko.Magic" target="_blank" rel="noreferrer noopener">
+              <FaFacebook color='rgb(238, 209, 137)' />
+            </a>
             {' '}
-            <FaInstagramSquare />
+            <a href="https://www.instagram.com/zoyche.to" target="_blank" rel="noreferrer noopener">
+              <FaInstagramSquare color='rgb(238, 209, 137)' />
+            </a>
             {' '}
           </span>
           <button className={styles.buttonCall} onClick={handleOpen}>{t('contacts.call')}</button>
@@ -161,7 +165,7 @@ const Contacts = () => {
       <div className={styles.reserve}>
         <h1 className={styles.textWrapper}>
           <div>{t('contacts.request')}</div>
-          +359 888888888
+          +359 877 265 897
         </h1>
       </div>
       <div>
