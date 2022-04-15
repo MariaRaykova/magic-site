@@ -68,7 +68,7 @@ i {
     background: var(--primary-color);
     width: 5vmin;
     height: 3vmin;
-    margin: 0 auto;
+    margin: 0 5px;
     padding: 0;
     display: inline-block;
     text-align: center;
@@ -79,5 +79,9 @@ i {
 .span {
     color: var(--secondary-color);
     font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.social {
     margin-right: 5px;
 }
