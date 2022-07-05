@@ -26,7 +26,7 @@ const Contacts = () => {
   })
 
   const form = useRef();
-  const notify = (text: string) => toast.error(text);
+  const notify = (text: string) => toast.error(text, { theme: 'dark' });
   
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

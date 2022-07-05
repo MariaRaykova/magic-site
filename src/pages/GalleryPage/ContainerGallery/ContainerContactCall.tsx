@@ -13,7 +13,7 @@ import { t } from 'i18next';
 const ContactSmall = (props: { handleClose: undefined }) => {
 
   const form = useRef();
-  const notify = (text: string) => toast.error(text);
+  const notify = (text: string) => toast.error(text, { theme: 'dark' });
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,10 +35,6 @@ const ContactSmall = (props: { handleClose: undefined }) => {
         console.log(error.text);
       });
   };
-
-  const handleChange = (event: { target: { value: unknown } }) => {
-    console.log(event?.target.value)
-  }
 
   return (
     <ModalContactCall handleClose={props.handleClose}>
