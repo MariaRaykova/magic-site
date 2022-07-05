@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@fortawesome/fontawesome-svg-core": "6.1.0",
     "@fortawesome/free-regular-svg-icons": "6.1.0",
     "@fortawesome/free-solid-svg-icons": "6.1.0",
@@ -12,6 +13,8 @@
     "@testing-library/user-event": "13.5.0",
     "@types/jest": "27.4.1",
     "@types/node": "16.11.26",
+    "emailjs": "^4.0.0",
+    "emailjs-com": "^3.2.0",
     "eslint-config-airbnb": "19.0.4",
     "i18next": "21.6.14",
     "i18next-browser-languagedetector": "6.1.3",
@@ -21,6 +24,7 @@
     "react-icons": "4.3.1",
     "react-router-dom": "6.2.2",
     "react-scripts": "5.0.0",
+    "react-toastify": "^9.0.5",
     "react-transition-group": "4.4.2",
     "swiper": "8.0.7",
     "typescript": "4.6.2"

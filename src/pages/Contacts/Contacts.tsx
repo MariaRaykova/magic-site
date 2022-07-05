@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, LegacyRef, FormEvent } from 'react'
 
 import {
   FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagramSquare,
 } from 'react-icons/fa'
+import emailjs from '@emailjs/browser'
 
-import Layout from '../Layout/Layout'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import styles from './Contacts.module.css'
 
@@ -23,9 +25,32 @@ const Contacts = () => {
     open: false,
   })
 
-  const handleChange = (event: { target: { value: unknown } }) => {
-    console.log(event?.target.value)
-  }
+  const form = useRef();
+  const notify = (text: string) => toast.error(text);
+  
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const filter = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (!form.current?.['user']['value']) {
+      notify('Вашето име трябва да е попълнено!');
+    }
+    if (!form.current?.['email']['value']) {
+      notify('Вашият и-майл трябва да е попълнен!');
+    } else if (!filter.test(form.current?.['email']['value'])) {
+      notify('Вашият и-майл трябва да в правилен формат!');
+    }
+    if (!form.current?.['message']['value']) {
+      notify('Вашето съобщение трябва да е попълнено!');
+    }
+    console.log('Data: ', form.current?.['user']['value']);
+    emailjs.sendForm('service_2l7snde', 'template_h3wplnu', form.current as unknown as string, 'cCxiMnLFLkMAR0XLJ')
+      .then((result) => {
+        console.log(result);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
 
   const handleOpen = () => {
     setState((prevState) => ({ ...prevState, open: true }))
@@ -37,6 +62,7 @@ const Contacts = () => {
 
   return (
     <>
+      <ToastContainer />
       {state.open && <ContainerContactCall handleClose={handleClose} />}
 
       <div className={styles.reserve}>
@@ -77,91 +103,68 @@ const Contacts = () => {
           <button className={styles.buttonCall} onClick={handleOpen}>{t('contacts.call')}</button>
         </div>
 
-        <div className={styles.containerIn}>
-          <div>
-
-            <div className={styles.inputWrapper}>
-              <input
-                type="text"
-                id="user"
-                placeholder={t('contacts.yourName')}
-                name="Test"
-                // value={''}
-                onChange={handleChange}
-              />
-              <label
-                htmlFor="user"
-                className="fa fa-user "
-                style={{
-                  color: 'var(--secondary-color)', position: 'absolute', left: '20px', top: 'calc(50% - 0.5em)',
-                }}
-              />
-            </div>
-
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-
+        
+        <form id="inquiry_form" ref={form as unknown as LegacyRef<HTMLFormElement> | undefined} onSubmit={sendEmail}>
+          <div className={styles.containerIn}>
+            <div>
               <div className={styles.inputWrapper}>
                 <input
                   type="text"
-                  id="phone"
-                  style={{ width: '98%', marginRight: '5px' }}
-                  placeholder={t('contacts.yourPhone')}
-                  name="Test"
-                  // value={''}
-                  onChange={handleChange}
+                  id="user"
+                  placeholder={t('contacts.yourName')}
+                  name="name"
                 />
                 <label
-                  htmlFor="phone"
-                  className="fa fa-phone  "
+                  htmlFor="user"
+                  className="fa fa-user "
                   style={{
                     color: 'var(--secondary-color)', position: 'absolute', left: '20px', top: 'calc(50% - 0.5em)',
                   }}
                 />
               </div>
 
+              <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                <div className={styles.inputWrapper}>
+                  <input
+                    type="text"
+                    id="email"
+                    style={{ maxWidth: '98%', marginLeft: '5px' }}
+                    placeholder={t('contacts.yourEmail')}
+                    name="email"
+                  />
+                  {' '}
+                  <label
+                    htmlFor="email"
+                    className="fa fa-envelope  "
+                    style={{
+                      color: 'var(--secondary-color)', position: 'absolute', left: '20px', top: 'calc(50% - 0.5em)',
+                    }}
+                  />
+                </div>
+              </div>
+
               <div className={styles.inputWrapper}>
-                <input
-                  type="text"
-                  id="email"
-                  style={{ maxWidth: '98%', marginLeft: '5px' }}
-                  placeholder={t('contacts.yourEmail')}
-                  name="Test"
-                  // value={''}
-                  onChange={handleChange}
+                <textarea
+                  id="text"
+                  placeholder={t('contacts.yourMessage')}
+                  name="message"
+                  rows={8}
                 />
-                {' '}
                 <label
-                  htmlFor="email"
-                  className="fa fa-envelope  "
+                  htmlFor="text"
+                  className="fa fa-pencil  "
                   style={{
-                    color: 'var(--secondary-color)', position: 'absolute', left: '20px', top: 'calc(50% - 0.5em)',
+                    color: 'var(--secondary-color)', position: 'absolute', left: '20px', top: 'calc(12% - 0.5em)',
                   }}
                 />
               </div>
-            </div>
 
-            <div className={styles.inputWrapper}>
-              <textarea
-                id="text"
-                placeholder={t('contacts.yourMessage')}
-                name="Test"
-                rows={8}
-                // value={''}
-                onChange={handleChange}
-              />
-              <label
-                htmlFor="text"
-                className="fa fa-pencil  "
-                style={{
-                  color: 'var(--secondary-color)', position: 'absolute', left: '20px', top: 'calc(12% - 0.5em)',
-                }}
-              />
+              <input type="submit" value={t('contacts.send') as string} />
             </div>
-
-            <button className={styles.buttonSend}>{t('contacts.send')}</button>
           </div>
-        </div>
+        </form>
       </div>
+
       <div className={styles.reserve}>
         <h1 className={styles.textWrapper}>
           <div>{t('contacts.request')}</div>
