@@ -65,5 +65,14 @@
     "about": {
         "textMain": "Zoiko Milenkov, He started his career as a joke. He was inspired by the tricks and illusions of a young girl and her father back in 2011. Zoiko starts searching the Internet for various videos with tricks and begins to unravel the secrets of tricks. In 2012, Zoiko was invited to the King of Magicians Astor on April 1, who organized a competitive festival. With his 5-minute program, Zoiko impresses everyone on the jury and the audience, when it is announced that Zoiko is self-taught, the jury decided to award him with a special prize for future magician. Zoiko receives invitations to international festivals. Zoiko goes to Antalya - Turkey to work as an illusionist and gain experience from professionals and the big stage. He returned to Bulgaria and is preparing for the next events and competitions from which he has won prestigious awards to date, the last of which is from the international tournament \"Golden Cat\" in Gabrovo 2022. Zoiko is a professional in the field of close-up tricks and stage magic. With various programs presented at various events, such as children's birthdays, baptisms, weddings, corporate parties or a holiday with an occasion for fun.",
         "text": "What I try to convey to my audience is inspiration, emotions, joy and a lot of fun."
+    },
+    "errors": {
+        "name": "Your name must be filled in!",
+        "phone": "Your phone number must be filled in!",
+        "phoneDigits": "Your phone number must be digits only!",
+        "email": "Your email must be filled in!",
+        "emailFormat": "Your email must be in the correct format!",
+        "message": "Your message must be complete!",
+        "error": "An error has occurred, please call +359 877 265 897"
     }
 }

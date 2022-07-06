@@ -20,12 +20,12 @@ const ContactSmall = (props: { handleClose: undefined }) => {
     const filter = /^$|\d+$/;
 
     if (!form.current?.['user']['value']) {
-      notify('Вашето име трябва да е попълнено!');
+      notify(t('errors.name'));
     }
     if (!form.current?.['message']['value']) {
-      notify('Вашето телефонен номер трябва да е попълнен!');
+      notify(t('errors.phone'));
     } else if (!filter.test(form.current?.['message']['value'])) {
-      notify('Вашият телефонен номер трябва да е само от цифри!');
+      notify(t('errors.phoneDigits'));
     }
     console.log('Data: ', form.current);
     emailjs.sendForm('service_2l7snde', 'template_h3wplnu', form.current as unknown as string, 'cCxiMnLFLkMAR0XLJ')
@@ -33,6 +33,7 @@ const ContactSmall = (props: { handleClose: undefined }) => {
         console.log(result);
       }, (error) => {
         console.log(error.text);
+        notify(t('errors.error'));
       });
   };
 

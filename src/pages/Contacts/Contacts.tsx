@@ -33,15 +33,15 @@ const Contacts = () => {
     const filter = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (!form.current?.['user']['value']) {
-      notify('Вашето име трябва да е попълнено!');
+      notify(t('errors.name'));
     }
     if (!form.current?.['email']['value']) {
-      notify('Вашият и-майл трябва да е попълнен!');
+      notify(t('errors.email'));
     } else if (!filter.test(form.current?.['email']['value'])) {
-      notify('Вашият и-майл трябва да в правилен формат!');
+      notify(t('errors.emailFormat'));
     }
     if (!form.current?.['message']['value']) {
-      notify('Вашето съобщение трябва да е попълнено!');
+      notify(t('errors.message'));
     }
     console.log('Data: ', form.current?.['user']['value']);
     emailjs.sendForm('service_2l7snde', 'template_h3wplnu', form.current as unknown as string, 'cCxiMnLFLkMAR0XLJ')
@@ -49,6 +49,7 @@ const Contacts = () => {
         console.log(result);
       }, (error) => {
         console.log(error.text);
+        notify(t('errors.error'));
       });
   };
 
