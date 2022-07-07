@@ -15,9 +15,6 @@ const Header: FC = () => {
     }, {
         id: 2,
         language: 'en',
-    }, {
-        id: 3,
-        language: 'rus',
     }], [t])
 
     return (
