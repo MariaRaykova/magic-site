@@ -12,11 +12,21 @@
     z-index: 12;
 }
 .navigation a {
-    margin-right: 30px;
+    margin-right: 3vmin;
     color: var(--text-color);
     text-decoration: none;
 }
 .active {
     color: var(--secondary-color) !important;
     text-decoration: underline !important;
+}
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .navigation {
+        padding: var(--mobile-padding);
+        display: flex;
+        justify-content: space-between;
+    }
+    .navigation a {
+        margin-right: 0;
+    }
 }

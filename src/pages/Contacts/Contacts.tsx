@@ -105,7 +105,7 @@ const Contacts = () => {
         </div>
 
         
-        <form id="inquiry_form" ref={form as unknown as LegacyRef<HTMLFormElement> | undefined} onSubmit={sendEmail}>
+        <form id="inquiry_form" className={styles.inquiry_form} ref={form as unknown as LegacyRef<HTMLFormElement> | undefined} onSubmit={sendEmail}>
           <div className={styles.containerIn}>
             <div>
               <div className={styles.inputWrapper}>
