@@ -1,9 +1,8 @@
-import React, { FC, useMemo } from "react";
-import { Link } from "react-router-dom";
+import React, { FC, useMemo } from 'react';
 
-import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from "react-icons/fa";
-import { useTranslation } from "react-i18next";
-import styles from "./index.module.css";
+import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import styles from './index.module.css';
 
 const Header: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,11 +13,11 @@ const Header: FC = () => {
     () => [
       {
         id: 1,
-        language: "bg",
+        language: 'bg',
       },
       {
         id: 2,
-        language: "en",
+        language: 'en',
       },
     ],
     [t]
@@ -29,7 +28,6 @@ const Header: FC = () => {
       <div className={styles.infoLine}>
         <div className={styles.leftIcons}>
           <span className={styles.social}>
-            {/* <FaFacebook onClick={() => window.open('https://google.com.ar')} /> */}
             <a
               href="https://www.facebook.com/Zoyko.Magic"
               target="_blank"
@@ -51,13 +49,13 @@ const Header: FC = () => {
         <div className={styles.rightIcons}>
           <span className={styles.textCall}>
             <FaPhoneAlt className={styles.span} />
-            {t("phone")}
+            {t('phone')}
           </span>
         </div>
         <div className={styles.buttons}>
-          {languages.map((language) => (
+          {languages.map((language, index) => (
             <button
-              key="language.id"
+              key={index}
               className={styles.button}
               onClick={() => changeLanguage(`${language.language}`)}
             >

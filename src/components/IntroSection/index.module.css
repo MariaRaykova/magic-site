@@ -33,15 +33,13 @@
 .imageWrapper {
   z-index: 2;
   margin-right: 15vmin;
-  flex: 1 1 50%;
-  width:70%;
-  height:90%;
+  flex: 1 0 50%;
 }
 .imageWrapper img {
   padding-top: 2vmin;
   z-index: 1;
   height: 100%;
-  width: 100%;
+  width: auto;
 }
 .headerWrapper {
   display:flex;

@@ -27,7 +27,7 @@ const ContactSmall = (props: { handleClose: undefined }) => {
     } else if (!filter.test(form.current?.['message']['value'])) {
       notify(t('errors.phoneDigits'));
     }
-    console.log('Data: ', form.current);
+
     emailjs.sendForm('service_2l7snde', 'template_h3wplnu', form.current as unknown as string, 'cCxiMnLFLkMAR0XLJ')
       .then((result) => {
         console.log(result);

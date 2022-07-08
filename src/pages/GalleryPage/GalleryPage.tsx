@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import ContainerGallery from './ContainerGallery/ContainerGallery';
 import Layout from '../Layout/Layout';
-// import { arrImg } from "./Import_Images";
+import { arrImg } from './Import_Images';
 
 import styles from './GalleryPage.module.css';
 import { useTranslation } from 'react-i18next';
@@ -37,7 +37,7 @@ const GalleryPage = () => {
         <h1 className={styles.textWrapper}>{t('gallery.title')}</h1>
       </div>
 
-      {/* {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={arrImg} handleClose={handleClose} />}
+      {state.open && <ContainerGallery imagePathLink={state.imgPath} allImages={arrImg} handleClose={handleClose} />}
 
       <div className={`${styles.container} `}>
         {
@@ -51,7 +51,7 @@ const GalleryPage = () => {
             />
           ))
         }
-      </div> */}
+      </div>
       <div className={styles.reserve} />
     </>
   );

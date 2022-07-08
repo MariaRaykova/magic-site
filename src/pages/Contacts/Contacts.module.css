@@ -135,7 +135,6 @@ textarea {
 }
 
 textarea:focus {
-  /* border: 1px solid var(--highlight-secondary-color); */
   box-shadow: 0 0 10px var(--highlight-gallery-color);
 }
 
@@ -152,14 +151,9 @@ input {
   font-family: PerspectiveC;
   font-size: 20px;
   padding-left: 50px;
-  /* border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden; */
 }
 
 input:focus {
-  /* border: 1px solid var(--highlight-secondary-color); */
   box-shadow: 0 0 10px var(--highlight-gallery-color);
 }
 

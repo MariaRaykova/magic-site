@@ -43,7 +43,7 @@ const Contacts = () => {
     if (!form.current?.['message']['value']) {
       notify(t('errors.message'));
     }
-    console.log('Data: ', form.current?.['user']['value']);
+
     emailjs.sendForm('service_2l7snde', 'template_h3wplnu', form.current as unknown as string, 'cCxiMnLFLkMAR0XLJ')
       .then((result) => {
         console.log(result);
