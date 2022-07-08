@@ -9,13 +9,13 @@ const IntroSection: FC = () => {
         <div className={styles.intro} >
             <div className={styles.videoWrapper}>
                 <div className={styles.overlay} />
-                {/* <video
+                <video
                     className={styles.video}
-                    src="https://luzkar.com/images/video/video-lg.mp4"
+                    src='/video/magic-effect.mp4'
                     autoPlay
                     loop
                     muted
-                /> */}
+                />
             </div>
             <div className={styles.headerWrapper}>
                 <SectionText
