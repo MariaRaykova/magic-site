@@ -94,3 +94,17 @@ body {
   opacity: 0.5;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .container {
+    background-color: var(--primary-color);
+    align-items: stretch;
+    width: 100%;
+    padding: var(--mobile-padding);
+    gap: 5px;
+    grid-auto-flow: dense;
+  }
+  .img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
