@@ -1,8 +1,8 @@
 .navigation {
+    width: 100%;
     position: sticky;
     top: 0;
     padding: var(--main-padding);
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -22,9 +22,10 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 991px) {
     .navigation {
+         width: 100%;
         padding: var(--mobile-padding);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .navigation a {
         margin-right: 0;
