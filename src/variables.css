@@ -9,6 +9,7 @@
   --text-color: #efdccc;
   --header-font-size: 10vmin;
   --main-padding: 12px 15vmin;
+  --mobile-padding: 12px 5vmin;
   --title-font-size: 8vmin;
   --text-font-size: 4vmin;
 }

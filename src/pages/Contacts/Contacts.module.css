@@ -39,11 +39,11 @@
 .mainContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  justify-content: space-around;
+  padding: var(--main-padding);
 }
 .call {
+  flex: 1 0 40%;
   width: 40rem;
   display: flex;
   flex-direction: column;
@@ -55,9 +55,11 @@
   margin: 10px;
   margin-right: 53px;
 }
-
+.inquiry_form {
+  flex: 1 0 40%;
+}
 .containerIn {
-  width: 35rem;
+  width:100%;
   display: flex;
   flex-direction: column;
 }
@@ -133,7 +135,6 @@ textarea {
 }
 
 textarea:focus {
-  /* border: 1px solid var(--highlight-secondary-color); */
   box-shadow: 0 0 10px var(--highlight-gallery-color);
 }
 
@@ -150,18 +151,29 @@ input {
   font-family: PerspectiveC;
   font-size: 20px;
   padding-left: 50px;
-  /* border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden; */
 }
 
 input:focus {
-  /* border: 1px solid var(--highlight-secondary-color); */
   box-shadow: 0 0 10px var(--highlight-gallery-color);
 }
 
 .inputWrapper {
   width: 100%;
   position: relative;
+}
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--mobile-padding);
+  }
+  .inquiry_form {
+    flex: 1 1 80%;
+  }
+  .call {
+    flex: 1 1 80%;
+  }
 }

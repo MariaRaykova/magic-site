@@ -1,5 +1,4 @@
 import React, { FC, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 
 import { FaPhoneAlt, FaFacebook, FaInstagramSquare } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
@@ -29,7 +28,6 @@ const Header: FC = () => {
       <div className={styles.infoLine}>
         <div className={styles.leftIcons}>
           <span className={styles.social}>
-            {/* <FaFacebook onClick={() => window.open('https://google.com.ar')} /> */}
             <a
               href="https://www.facebook.com/Zoyko.Magic"
               target="_blank"
@@ -55,9 +53,9 @@ const Header: FC = () => {
           </span>
         </div>
         <div className={styles.buttons}>
-          {languages.map((language) => (
+          {languages.map((language, index) => (
             <button
-              key="language.id"
+              key={index}
               className={styles.button}
               onClick={() => changeLanguage(`${language.language}`)}
             >

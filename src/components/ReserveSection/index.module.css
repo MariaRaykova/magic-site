@@ -34,15 +34,19 @@
     url(/public/images/layered-waves-haikei6.svg) top no-repeat;
   content: "";
 }
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .reserve {
+    padding: var(--mobile-padding);
+  }
+}
 .textWrapper {
   position: relative;
   text-align: center;
 }
 .items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
-  text-align: start;
   padding-left: 0;
   color: var(--text-color);
   font-size: var(--text-font-size);
