@@ -36,6 +36,16 @@ const PhotosSection = () => {
         disableOnInteraction: false,
       }}
       className={styles.swiperWrapper}
+      breakpoints={{
+        320: {
+          width: 320,
+          slidesPerView: 2,
+        },
+        992: {
+          width: 992,
+          slidesPerView: 4,
+        },
+      }}
     >
       {images.map(image => (
         <SwiperSlide key={image.id}>

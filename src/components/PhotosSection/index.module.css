@@ -6,3 +6,13 @@
 .swiperWrapper {
   height: 400px;
 }
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .swiperSlide {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+  }
+  .swiperWrapper {
+    height: 320px;
+  }
+}

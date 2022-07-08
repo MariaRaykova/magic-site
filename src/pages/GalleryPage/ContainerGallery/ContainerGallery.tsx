@@ -15,8 +15,6 @@ const ContainerGallery = (props: any) => {
 
   useEffect(() => {
     setState((prevState: any) => ({ ...prevState, path: arr[state.num] }));
-
-    // console.log('From UseEffect', arr[state.num])
   }, [state.num]);
 
   const handleLeftClick = () => {

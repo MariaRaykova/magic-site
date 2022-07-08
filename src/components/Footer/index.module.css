@@ -1,11 +1,26 @@
 .footer {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-column-gap: 5vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: var(--main-padding);
   font-size: 3vmin;
   color: var(--secondary-color);
 }
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .footer {
+    padding: var(--mobile-padding);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .list,
+  .contacts,
+  .follow {
+    display: flex;
+    flex: 1 1 100%;
+  }
+}
+
 .title {
   font-size: 5vmin;
   text-align: start;
@@ -24,9 +39,11 @@
   width: 30px;
   height: 30px;
 }
+.list,
 .contacts,
 .follow {
   display: flex;
+  flex: 1 1 30%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -78,7 +95,6 @@
   justify-items: start;
 }
 .title {
-  grid-column: span 3;
   justify-self: start;
   z-index: 3;
 }

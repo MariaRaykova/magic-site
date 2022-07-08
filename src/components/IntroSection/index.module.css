@@ -1,5 +1,6 @@
 .intro {
   display: flex;
+  align-items: center;
   height: 80vh;
   width: 100%;
   position: relative;
@@ -31,8 +32,8 @@
 }
 .imageWrapper {
   z-index: 2;
-  padding-right: 15vmin;
-  flex: 1 1 50%;
+  margin-right: 15vmin;
+  flex: 1 0 50%;
 }
 .imageWrapper img {
   padding-top: 2vmin;
@@ -54,13 +55,17 @@
     justify-content: center;
     width:60%;
     flex-wrap: wrap;
+    margin-right: 5vmin;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .intro {
+    height: 50vh;
+  }
   .imageWrapper{
     display:flex;
     justify-content: center;
-    width:40%;
+    width:50%;
     height:80%;
     flex-wrap: wrap;
   }
